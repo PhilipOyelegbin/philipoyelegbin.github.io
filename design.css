@@ -1,0 +1,107 @@
+/* Custom properties/variables  */
+:root {--main-white: #f0f0f0; --main-red: #be3144; --main-blue: #99b3f1; --main-gray: #303841;}
+
+/* Base reset */
+* {margin: 0; padding: 0;}
+
+/* box-sizing and font sizing */
+*, *::before, *::after {box-sizing: inherit;}
+
+#navbar {display: flex; justify-content: center; position: fixed; top: 0; left: 0; width: 100%; background: var(--main-red);}
+
+.nav-list {display: flex; margin: 0 1px;}
+
+.nav-list a {display: block; padding: 10px;}
+
+.nav-list a:hover {background: var(--main-blue);}
+
+ul {list-style: none;}
+
+a {text-decoration: none; color: var(--main-white);}
+
+html {box-sizing: border-box; scroll-behavior: smooth;}
+
+body {font-family: 'Poppins', sans-serif, "Helvetica Neue", Helvetica, Arial; font-weight: 200; line-height: 1.5; color: var(--main-white); font-size: 1.3em;}
+
+h1 {font-weight: 600; font-size: 2em;}
+
+h2 {font-weight: 400; font-size: 1.7em;}
+
+img {display: block; width: 100%;}
+
+/* Welcome section */
+#welcome-section {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; width: 100%; height: 145vh; background-image: linear-gradient(80deg, #b9ec66ab 0%, #54aebeab 100%);}
+
+.skills > p {font-style: italic; color: var(--main-red); width: 80%; margin: auto;}
+
+.skills > label {color: var(--main-gray);}
+
+progress {width: 40%;}
+
+.profile-image {width: 75%; height: 200px; border-radius: 50%; padding-bottom: 10px;}
+
+/* Projects section */
+#projects {text-align: center; padding: 30px 20px; background: var(--main-blue);}
+
+.projects-section-header {max-width: 650px; margin: 0 auto 60px auto; border-bottom: 2px solid var(--main-white);}
+
+/* "Automagic" image grid using no media queries */
+.projects-grid {display: grid; grid-template-columns: 1fr; grid-gap: 40px; width: 100%; max-width: 1280px; margin: 0 auto; margin-bottom: 40px;}
+    
+.project {background: var(--main-gray); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); border-radius: 5px;}
+
+.code {color: var(--main-gray);}
+
+.project-image {height: calc(100% - 6.8rem); width: 95%; object-fit: cover; margin: 5px auto;}
+
+.project-title {padding: 20px 0.5px;}
+
+/* Footer/Contact section */
+#contact {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; background: var(--main-gray);}
+
+.contact-links {grid-template-columns: 1fr; display: grid; grid-gap: 20px; width: 100%; margin: 10px;}
+
+.contact-details {text-shadow: 2px 2px 1px #1f1f1f;}
+
+footer > p {font-style: italic; color: var(--main-blue);}
+
+
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+
+@media only screen and (min-width: 768px) {
+	#navbar {justify-content: flex-end;}
+	
+	.nav-list {margin-right: 20px;}
+	
+	#welcome-section {height: 70vh;}
+	
+	.about {display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); grid-gap: 10px; width: 100%; max-width: 1280px; margin: 0 auto; margin-bottom: 40px;}
+	
+	.projects-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); grid-gap: 40px; width: 100%; max-width: 1280px; margin: 0 auto; margin-bottom: 40px;}
+	
+	.code {transition: color 0.5s ease-out;}
+	
+	.profile-image {width: 50%; height: 250px; border-radius: 50%; margin: auto;}
+	
+	.project:hover .code {color: #ff7f50;}
+	
+	.contact-links {display: flex; justify-content: center; max-width: 980px; margin: 30px; flex-wrap: wrap;}
+	
+	.contact-details {margin-right: 20px; transition: transform 0.5s ease-out;}
+	
+	.contact-details:hover {transform: translateY(8px);}
+}
