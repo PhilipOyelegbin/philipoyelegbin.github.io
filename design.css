@@ -30,15 +30,15 @@ h2 {font-weight: 400; font-size: 1.7em;}
 img {display: block; width: 100%;}
 
 /* Welcome section */
-#welcome-section {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; width: 100%; height: 145vh; background-image: linear-gradient(80deg, #b9ec66ab 0%, #54aebeab 100%);}
+#welcome-section {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; width: 100%; margin-top: 50px; background-image: linear-gradient(80deg, #b9ec66ab 0%, #54aebeab 100%);}
 
 .skills > p {font-style: italic; color: var(--main-red); width: 80%; margin: auto;}
 
 .skills > label {color: var(--main-gray);}
 
-progress {width: 40%;}
+progress {width: 30%;}
 
-.profile-image {width: 75%; height: 200px; border-radius: 50%; padding-bottom: 10px;}
+.profile-image {width: 75%; height: 200px; border-radius: 50%; padding-bottom: 10px; margin: auto;}
 
 /* Projects section */
 #projects {text-align: center; padding: 30px 20px; background: var(--main-blue);}
@@ -87,7 +87,7 @@ footer > p {font-style: italic; color: var(--main-blue);}
 	
 	.nav-list {margin-right: 20px;}
 	
-	#welcome-section {height: 70vh;}
+	/*#welcome-section {height: 70vh;}*/
 	
 	.about {display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); grid-gap: 10px; width: 100%; max-width: 1280px; margin: 0 auto; margin-bottom: 40px;}
 	
@@ -95,7 +95,7 @@ footer > p {font-style: italic; color: var(--main-blue);}
 	
 	.code {transition: color 0.5s ease-out;}
 	
-	.profile-image {width: 50%; height: 250px; border-radius: 50%; margin: auto;}
+	.profile-image {width: 50%; height: 250px; border-radius: 50%;}
 	
 	.project:hover .code {color: #ff7f50;}
 	
