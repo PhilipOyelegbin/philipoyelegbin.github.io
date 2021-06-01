@@ -2,7 +2,7 @@
 :root {--main-white: #f0f0f0; --main-red: #be3144; --main-blue: #99b3f1; --main-gray: #303841;}
 
 /* Base reset */
-* {margin: 0; padding: 0;}
+* {margin: 0; padding: 0; border: none;}
 
 /* box-sizing and font sizing */
 *, *::before, *::after {box-sizing: inherit;}
@@ -21,16 +21,14 @@ a {text-decoration: none; color: var(--main-white);}
 
 html {box-sizing: border-box; scroll-behavior: smooth;}
 
-body {font-family: 'Poppins', sans-serif, "Helvetica Neue", Helvetica, Arial; font-weight: 200; line-height: 1.5; color: var(--main-white); font-size: 1.3em;}
+body {font-family: 'Poppins', sans-serif, "Helvetica Neue", Helvetica, Arial; font-weight: 300; line-height: 1.5; color: var(--main-white);}
 
-h1 {font-weight: 600; font-size: 2em;}
-
-h2 {font-weight: 400; font-size: 1.7em;}
+h1, h2 {font-weight: 500;}
 
 img {display: block; width: 100%;}
 
 /* Welcome section */
-#welcome-section {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; width: 100%; margin-top: 50px; background-image: linear-gradient(80deg, #b9ec66ab 0%, #54aebeab 100%);}
+#welcome-section {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; width: 100%; margin-top: 40px; background-image: linear-gradient(80deg, #b9ec66ab 0%, #54aebeab 100%);}
 
 .skills > p {font-style: italic; color: var(--main-red); width: 80%; margin: auto;}
 
@@ -87,7 +85,7 @@ footer > p {font-style: italic; color: var(--main-blue);}
 	
 	.nav-list {margin-right: 20px;}
 	
-	/*#welcome-section {height: 70vh;}*/
+	.nav-list a {padding: 10px 50px;}
 	
 	.about {display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); grid-gap: 10px; width: 100%; max-width: 1280px; margin: 0 auto; margin-bottom: 40px;}
 	
