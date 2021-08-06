@@ -1,132 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+      rel="stylesheet"
+    />
     <title>Philip Oyelegbin</title>
-    <link rel="stylesheet" href="design.css" type="text/css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
-        <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet"/>
-</head>
-<body>
-	<header>
-		<!-- START NAV -->
-		<nav id="navbar">
-			<ul class="nav-list">
-				<li><a href="#welcome-section">About</a></li>
-				<li><a href="#projects">Work</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-		<!-- END NAV -->
-	</header>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-list">
+        <li>
+          <a href="#welcome">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-house-door-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#about">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person-circle"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+              <path
+                fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#project">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-briefcase-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"
+              />
+              <path
+                d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#offers">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-cart-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#tools">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-tools"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#contact">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-phone-vibrate-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4 4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm5 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0zM1.807 4.734a.5.5 0 1 0-.884-.468A7.967 7.967 0 0 0 0 8c0 1.347.334 2.618.923 3.734a.5.5 0 1 0 .884-.468A6.967 6.967 0 0 1 1 8c0-1.18.292-2.292.807-3.266zm13.27-.468a.5.5 0 0 0-.884.468C14.708 5.708 15 6.819 15 8c0 1.18-.292 2.292-.807 3.266a.5.5 0 0 0 .884.468A7.967 7.967 0 0 0 16 8a7.967 7.967 0 0 0-.923-3.734zM3.34 6.182a.5.5 0 1 0-.93-.364A5.986 5.986 0 0 0 2 8c0 .769.145 1.505.41 2.182a.5.5 0 1 0 .93-.364A4.986 4.986 0 0 1 3 8c0-.642.12-1.255.34-1.818zm10.25-.364a.5.5 0 0 0-.93.364c.22.563.34 1.176.34 1.818 0 .642-.12 1.255-.34 1.818a.5.5 0 0 0 .93.364C13.856 9.505 14 8.769 14 8c0-.769-.145-1.505-.41-2.182z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section id="welcome">
+      <h1>Build a website that suits your business</h1>
+      <p>
+        This is your time, your people need you. Be part of the solution, let's
+        elevate your offer and build a website that shows your ideal client
+        exactly how you can help them.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1585247226801-bc613c441316?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        alt="building"
+      />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+        <path
+          fill="#99b3f1"
+          fill-opacity="1"
+          d="M0,160L48,149.3C96,139,192,117,288,112C384,107,480,117,576,133.3C672,149,768,171,864,154.7C960,139,1056,85,1152,64C1248,43,1344,53,1392,58.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
 
-	<main>
-		<!-- START WELCOME SECTION -->
-		<section id="welcome-section">
-			<div class="about">
-				<div class="intro">
-					<h1>Hey, I am Philip Oyelegbin</h1>
-					<img class="profile-image" src="https://lh3.googleusercontent.com/ogw/ADGmqu8Bo_wNRNcw2uuvl--RukCgQ1LLnEl1vg8fIN3E_g=s83-c-mo" alt="image">
-				</div>
-				<div class="skills">
-					<p>a full-stack web and software developer with basic knowlegde of UI/UX design. Certified by SoloLearn.</p>
-					<label for="html">HTML5 <progress min="0" max="100" value="93"></progress> 93%</label><br>
-					<label for="css">CSS3 <progress min="0" max="100" value="90"></progress> 90%</label><br>
-					<label for="javascript">JavaScript <progress min="0" max="100" value="60"></progress> 60%</label><br>
-					<label for="figma">Figma <progress min="0" max="100" value="30"></progress> 30%</label><br>
-					<label for="python">Python (Flask) <progress min="0" max="100" value="90"></progress> 90%</label><br>
-					<label for="mysql">MySQL <progress min="0" max="100" value="85"></progress> 85%</label>
-				</div>
-			</div>
-		</section>
-		<!-- END WELCOME SECTION -->
+    <section id="about">
+      <img
+        src="https://media-exp1.licdn.com/dms/image/C4E03AQGZ2InJqMAJaQ/profile-displayphoto-shrink_800_800/0/1591621848090?e=1633564800&v=beta&t=iCoRqFuN6dA0liHvwXWkYrIn7BEnIdSguBP1PM6yadY"
+        alt="owners image"
+      />
+      <h3>Freelance Full Stack Web Developer</h3>
+      <p>
+        <b>Hi, I'm Philip Oyelegbin.</b> I build beautiful highly targeted
+        websites for business taking their mind off their website and onto
+        becoming an example of what's possible.
+      </p>
+      <p>
+        As a certified web developer, I aim to get more businesses into the
+        world by helping other business to promote and grow their businesses via
+        amazing websites.
+      </p>
+    </section>
 
-		<!-- START PROJECTS SECTION -->
-		<section id="projects">
-			<h2 class="projects-section-header">These are some of my projects</h2>
+    <section id="project">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+        <path
+          fill="#99b3f1"
+          fill-opacity="1"
+          d="M0,288L48,261.3C96,235,192,181,288,133.3C384,85,480,43,576,58.7C672,75,768,149,864,176C960,203,1056,181,1152,149.3C1248,117,1344,75,1392,53.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        ></path>
+      </svg>
+      <h3>My Projects</h3>
+      <p>Below are the projects I've worked on...</p>
+      <div>
+        <a href="https://oyetek.herokuapp.com" target="_blank">
+          <img
+            src="http://vainec.herokuapp.com/static/images/OYETEK%20Logo.png"
+            alt="oyetek logo"
+          />
+          <p>
+            <span class="code">&lt;</span>OYETEK<span class="code"
+              >&#47;&gt;</span
+            ><br />A company's website
+          </p>
+        </a>
+        <a href="https://vainec.herokuapp.com" target="_blank">
+          <img
+            src="http://vainec.herokuapp.com/static/images/va.png"
+            alt="va logo"
+          />
+          <p>
+            <span class="code">&lt;</span>Vote Arbiter<span class="code"
+              >&#47;&gt;</span
+            ><br />A real-time voting website
+          </p>
+        </a>
+        <a href="https://mystore.herokuapp.com" target="_blank">
+          <img
+            src="http://mystore.herokuapp.com/static/images/mystore.png"
+            alt="mystore logo"
+          />
+          <p>
+            <span class="code">&lt;</span>TradeZone<span class="code"
+              >&#47;&gt;</span
+            ><br />An online store
+          </p>
+        </a>
+      </div>
+    </section>
 
-			<div class="projects-grid">
-				<a href="http://oyetek.herokuapp.com" target="_blank" class="project">
-					<img class="project-image" src="http://vainec.herokuapp.com/static/images/OYETEK%20Logo.png" alt="project"/>
-					<p class="project-title">
-						<span class="code">&lt;</span>
-						OYETEK Website
-						<span class="code">&#47;&gt;</span>
-						<br>
-						A company's website
-					</p>
-				</a>
-				<a href="http://vainec.herokuapp.com" target="_blank" class="project">
-					<img class="project-image" src="http://vainec.herokuapp.com/static/images/va.png" alt="project"/>
-					<p class="project-title">
-						<span class="code">&lt;</span>
-						Vote Arbiter
-						<span class="code">&#47;&gt;</span>
-						<br>
-						A real-time voting website
-					</p>
-				</a>
-				<a href="https://github.com/philipoyelegbin/performance" target="_blank" class="project">
-					<img class="project-image" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fblog.bismart.com%2Fhs-fs%2Fhubfs%2Fdata%2520visualization%2520with%2520power%2520bi.jpg%3Fwidth%3D3999%26name%3Ddata%2520visualization%2520with%2520power%2520bi.jpg&imgrefurl=https%3A%2F%2Fblog.bismart.com%2Fen%2Fdata-visualization-with-power-bi&tbnid=n0dGEGhrTDf8CM&vet=1&docid=WOctoSH3s6jmGM&w=3999&h=2666&source=sh%2Fx%2Fim" alt="project"/>
-					<p class="project-title">
-						<span class="code">&lt;</span>
-						Performance analysis
-						<span class="code">&#47;&gt;</span>
-						<br>
-						Analysis of data
-					</p>
-				</a>
-				<a href="https://mystore.herokuapp.com" target="_blank" class="project">
-					<img class="project-image" src="http://mystore.herokuapp.com/static/images/MYSTORE%20Logo.png" alt="project"/>
-					<p class="project-title">
-						<span class="code">&lt;</span>
-						MyStore Website
-						<span class="code">&#47;&gt;</span>
-						<br>
-						An online market website
-					</p>
-				</a>
-				<a href="https://github.com/philipoyelegbin/ftm" target="_blank" class="project">
-					<img class="project-image" src="https://twitter.com/OyelegbinPhilip/status/1399804954794209286?s=19" alt="project"/>
-					<p class="project-title">
-						<span class="code">&lt;</span>
-						Fund transfer mech.
-						<span class="code">&#47;&gt;</span>
-						<br>
-						GUI of a FTM
-					</p>
-				</a>
-			</div>
-		</section>
-		<!-- END PROJECTS SECTION -->
-	</main>
+    <section id="offers">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+        <path
+          fill="#ead18a"
+          fill-opacity="1"
+          d="M0,288L48,261.3C96,235,192,181,288,133.3C384,85,480,43,576,58.7C672,75,768,149,864,176C960,203,1056,181,1152,149.3C1248,117,1344,75,1392,53.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        ></path>
+      </svg>
+      <h2>Web Design for Businesses</h2>
+      <p>
+        From conseption to product UI/UX and designing web pages, I've got you
+        covered. <b>Here's how it works</b>
+      </p>
+      <div class="offers">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-binoculars-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.5 1A1.5 1.5 0 0 0 3 2.5V3h4v-.5A1.5 1.5 0 0 0 5.5 1h-1zM7 4v1h2V4h4v.882a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V13H9v-1.5a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5V13H1V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V4h4zM1 14v.5A1.5 1.5 0 0 0 2.5 16h3A1.5 1.5 0 0 0 7 14.5V14H1zm8 0v.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5V14H9zm4-11H9v-.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5V3z"
+            /></svg
+          ><br />
+          <label for="vision">Vision</label>
+          <p>
+            You need a beautiful and functional website that will inspire and connect with
+            their visitors. With the aim of
+            <b>converting website visitors into clients.</b>
+          </p>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-pencil-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
+            /></svg
+          ><br />
+          <label for="plan">Plan</label>
+          <p>
+            Realizing your vision requires a strategic plan. This is where we
+            analyze your target market and <b>tailor the look</b> of your site
+            to your vision and your ideal client's needs using Figma.
+          </p>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-columns-gap"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"
+            /></svg
+          ><br />
+          <label for="build">Build</label>
+          <p>
+            This is where I implement the plan making
+            <b>your vision come alive</b> on the web page. With the language of
+            comuters I build the structure using HTML, give it an attractive
+            look using CSS, make it interactive using JavaScript and serve it
+            using Flask.
+          </p>
+        </div>
+      </div>
+    </section>
 
-	<!-- START FOOTER/CONTACT SECTION -->
-	<footer id="contact">
-		<div class="contact-section-header">
-			<h2>Let's work together...</h2>
-		</div>
-		<div class="contact-links">
-			<a href="tel:(+234)8054945601" class="contact-details">
-				<i class="fas fa-mobile-alt"></i> Call
-			</a>
-			<a href="mailto:philipoyelegbin@gmail.com?subject=Interested%20in%20your%20services." class="contact-details">
-				<i class="fas fa-at"></i> G-mail
-			</a>
-			<a href="https://mobile.facebook.com/philip.oyelegbin" target="_blank" class="contact-details">
-				<i class="fab fa-facebook-square"></i> Facebook
-			</a>
-			<a href="https://mobile.twitter.com/OyelegbinPhilip" target="_blank" class="contact-details">
-				<i class="fab fa-twitter"></i> Twitter
-			</a>
-			<a href="https://linkedin.com/in/philipoyelegbin" target="_blank" class="contact-details">
-				<i class="fab fa-linkedin"></i> LinkedIn
-			</a>
-		</div>
-		<p>"Without hard work, nothing grows but weeds."<br>&copy; 2021 Moonshot</p>
-	</footer>
-	<!-- END FOOTER/CONTACT SECTION -->
-</body>
+    <section id="tools">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 300">
+        <path
+          fill="#99b3f1"
+          fill-opacity="1"
+          d="M0,288L48,261.3C96,235,192,181,288,133.3C384,85,480,43,576,58.7C672,75,768,149,864,176C960,203,1056,181,1152,149.3C1248,117,1344,75,1392,53.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        ></path>
+      </svg>
+      <h3>Skills/Tools</h3>
+      <p>For those who know what they're searching for...</p>
+      <div class="tools">
+        <div>
+          <img
+            src="https://pics.freeicons.io/uploads/icons/png/9655574981556105319-64.png"
+            alt="icon"
+          />
+          <p>Figma</p>
+        </div>
+        <div>
+          <img
+            src="https://image.flaticon.com/icons/png/128/888/888859.png"
+            alt="icon"
+          />
+          <p>HTML</p>
+        </div>
+        <div>
+          <img
+            src="https://image.flaticon.com/icons/png/128/919/919826.png"
+            alt="icon"
+          />
+          <p>CSS</p>
+        </div>
+        <div>
+          <img
+            src="https://image.flaticon.com/icons/png/128/919/919831.png"
+            alt="icon"
+          />
+          <p>SASS</p>
+        </div>
+        <div>
+          <img
+            src="https://pics.freeicons.io/uploads/icons/png/21088442871540553614-64.png"
+            alt="icon"
+          />
+          <p>Javascript</p>
+        </div>
+        <div>
+          <img
+            src="https://image.flaticon.com/icons/png/128/919/919852.png"
+            alt="icon"
+          />
+          <p>Python</p>
+        </div>
+        <div>
+          <img
+            src="https://pics.freeicons.io/uploads/icons/png/608070591536298181-64.png"
+            alt="icon"
+          />
+          <p>Flask</p>
+        </div>
+        <div>
+          <img
+            src="https://pics.freeicons.io/uploads/icons/png/4943187881553750385-64.png"
+            alt="icon"
+          />
+          <p>MySQL</p>
+        </div>
+        <div>
+          <img
+            src="https://pics.freeicons.io/uploads/icons/png/14178750871552037061-64.png"
+            alt="icon"
+          />
+          <p>VS Code</p>
+        </div>
+        <div>
+          <img
+            src="https://image.flaticon.com/icons/png/128/733/733553.png"
+            alt="icon"
+          />
+          <p>GitHub</p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="contact">
+        <img
+          src="https://media.istockphoto.com/photos/look-at-ads-below-portrait-of-handsome-happy-man-in-stylish-denim-picture-id1270762037?b=1&k=6&m=1270762037&s=170667a&w=0&h=_5dyGL6CBsyBv9z4U97piLsBz2rqpQXrnIPpwAQ0ff4="
+          alt="contact us"
+        />
+        <h3>In need of a developer?</h3>
+        <p>I'm currently available for freelance work.</p>
+        <a href="https://wa.me/2348054945601">Hire Me</a>
+      </div>
+
+      <div class="quick-link">
+        <img src="" alt="certificate" />
+        <a href="https://t.me/@PhilipOyelegbin" target="_blank" class="link">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telegram"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://linkedin.com/in/philipoyelegbin"
+          target="_blank"
+          class="link"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-linkedin"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://twitter.com/OyelegbinPhilip"
+          target="_blank"
+          class="link"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-twitter"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <blockquote>"Without hardwork, nothing grows but weeds"</blockquote>
+      <cite>&copy; 2021 MoonShot :: All Rights Reserved</cite>
+    </footer>
+  </body>
 </html>
