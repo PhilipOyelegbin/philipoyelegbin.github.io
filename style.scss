@@ -1,0 +1,274 @@
+:root {
+  --main-white: #f0f0f0;
+  --main-black: #000;
+  --main-red: #be3144;
+  --main-blue: #99b3f1;
+  --main-brown: #ead18a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+@mixin flexCenter($flow, $justify) {
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--main-black);
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+nav {
+  @include flexCenter(column, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-red);
+}
+
+.nav-list {
+  @include flexCenter(row, space-around);
+  margin: 0 1px;
+  a {
+    color: var(--main-white);
+    display: block;
+    padding: 5px 15px;
+    svg {
+      height: 25px;
+      width: 25px;
+    }
+    &:hover {
+      background: var(--main-blue);
+    }
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-black);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+#welcome {
+  @include flexCenter(column, center);
+  margin-top: 40px;
+  background: var(--main-brown);
+  img {
+    width: 80%;
+    height: 200px;
+  }
+}
+
+#about {
+  background: var(--main-blue);
+  img {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+  }
+  p {
+    margin-top: 10px;
+  }
+}
+
+#project {
+  background: var(--main-brown);
+  div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    a {
+      background: var(--main-blue);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+  }
+}
+
+#offers {
+  background: var(--main-blue);
+  .offers {
+    @include flexCenter(wrap, space-around);
+    padding-bottom: 10px;
+    div {
+      width: 280px;
+      height: 260px;
+      padding: 5px;
+      margin-top: 20px;
+      box-shadow: 1px 2px 2px 2px rgba(223, 49, 49, 0.5);
+      border-radius: 10px;
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+#tools {
+  background-color: var(--main-brown);
+  .tools {
+    @include flexCenter(wrap, center);
+    div {
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      width: 100px;
+      height: 80px;
+      margin: 10px;
+      img {
+        width: 100px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+#contact {
+  .contact {
+    img {
+      width: 80%;
+      height: 200px;
+      margin: auto;
+    }
+    background: #999;
+    color: var(--main-black);
+    padding-bottom: 10px;
+    p {
+      margin-bottom: 10px;
+    }
+    a {
+      background: green;
+      color: var(--main-white);
+      border-radius: 50px;
+      padding: 10px 20px;
+      &:hover {
+        background: var(--main-white);
+        color: green;
+      }
+    }
+  }
+  .quick-link {
+    img {
+      color: var(--main-white);
+      width: 300px;
+      height: 200px;
+      margin: auto;
+    }
+    .link svg {
+      height: 25px;
+      width: 25px;
+      margin: auto 20px;
+      color: var(--main-white);
+    }
+  }
+  background: #000;
+  blockquote, cite {
+    color: var(--main-red);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 1.3em;
+  }
+
+  nav {
+    @include flexCenter(column, flex-end);
+  }
+
+  .nav-list {
+    margin-right: 20px;
+    a {
+      padding: 10px 50px;
+    }
+  }
+
+  #welcome {
+    img {
+      height: 300px;
+    }
+  }
+
+  #about {
+    img {
+      height: 300px;
+    }
+  }
+
+  #project {
+    div {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 40px;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      .code {
+        transition: color 0.5s ease-out;
+      }
+      a:hover .code {
+        color: #ff7f50;
+      }
+    }
+  }
+
+  #offers .offers div {
+    width: 370px;
+    height: 300px;
+  }
+
+  #tools .tools div {
+    width: 130px;
+    img {
+      width: 130px;
+    }
+  }
+
+  .contact {
+    img {
+      height: 300px;
+    }
+  }
+
+  .link svg {
+    margin-right: 20px;
+    transition: transform 0.5s ease-out;
+    &:hover {
+      transform: translateY(8px);
+    }
+  }
+}
