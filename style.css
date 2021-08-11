@@ -1,9 +1,9 @@
 :root {
-  --main-white: #f0f0f0;
-  --main-black: #000;
-  --main-red: #be3144;
-  --main-blue: #c3e2f1;
-  --main-gray: #eee;
+  --main-white: #fff;
+  --main-gray: #444;
+  --main-black: #333;
+  --main-blue: #2f9bd0;
+  --main-yellow: #ffe000;
 }
 
 * {
@@ -11,7 +11,7 @@
   padding: 0;
   border: none;
   outline: none;
-  line-height: 1.5em;
+  line-height: 2em;
 }
 
 html {
@@ -25,7 +25,7 @@ body {
   font-weight: 300;
   line-height: 1.5;
   text-align: center;
-  color: var(--main-black);
+  color: var(--main-white);
 }
 
 h1,
@@ -51,7 +51,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-red);
+  background: var(--main-black);
 }
 
 .nav-list {
@@ -77,12 +77,12 @@ nav {
 }
 
 .nav-list a svg {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
 }
 
 .nav-list a:hover {
-  background: var(--main-blue);
+  color: var(--main-yellow);
 }
 
 ul {
@@ -91,7 +91,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--main-black);
+  color: var(--main-white);
 }
 
 img {
@@ -114,21 +114,33 @@ img {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 40px;
-  background: url("https://images.unsplash.com/photo-1585247226801-bc613c441316?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60") no-repeat;
-  background-size: cover;
-  color: #00ffff;
+  background: var(--main-gray);
 }
 
-#welcome .container {
-  text-shadow: 5px 2px 4px #000;
+#welcome h1 {
+  color: var(--main-yellow);
 }
 
-#welcome .container h1, #welcome .container p {
-  padding: 10px 0;
+#welcome h1,
+#welcome p {
+  padding: 5px 5px;
+}
+
+#welcome a {
+  background: var(--main-white);
+  color: var(--main-blue);
+  font-weight: bold;
+  padding: 10px 50px;
+  border-radius: 5px;
+}
+
+#welcome a:hover {
+  background: var(--main-blue);
+  color: var(--main-white);
 }
 
 #about {
-  background: var(--main-blue);
+  background: var(--main-black);
 }
 
 #about img {
@@ -139,8 +151,12 @@ img {
   padding: 15px 0;
 }
 
+#about h3 {
+  color: var(--main-yellow);
+}
+
 #about p {
-  margin-top: 10px;
+  padding: 5px 5px;
 }
 
 #project {
@@ -157,21 +173,34 @@ img {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 40px;
-  width: 280px;
+  width: 90%;
   max-width: 1280px;
   margin: auto;
   padding-bottom: 20px;
 }
 
 #project div a {
-  background: var(--main-blue);
-  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  background: var(--main-black);
+  -webkit-box-shadow: 1px 1px 2px #f8ec3e;
+          box-shadow: 1px 1px 2px #f8ec3e;
   border-radius: 5px;
+  width: 280px;
+  height: 230px;
+  margin: auto;
+  padding: 10px 5px;
+}
+
+#project div a img {
+  width: 150px;
+  margin: auto;
 }
 
 #offers {
-  background: var(--main-blue);
+  background: var(--main-black);
+}
+
+#offers p {
+  padding: 0 5px;
 }
 
 #offers .offers {
@@ -186,15 +215,17 @@ img {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 10px;
+  width: 90%;
+  margin: auto;
 }
 
 #offers .offers div {
   width: 280px;
-  height: 280px;
+  height: 400px;
   padding: 10px;
   margin-top: 20px;
-  -webkit-box-shadow: 1px 2px 2px 2px rgba(15, 15, 15, 0.5);
-          box-shadow: 1px 2px 2px 2px rgba(15, 15, 15, 0.5);
+  -webkit-box-shadow: 1px 2px 2px 2px #f8ec3e;
+          box-shadow: 1px 2px 2px 2px #f8ec3e;
   border-radius: 10px;
 }
 
@@ -205,6 +236,7 @@ img {
 #offers .offers div svg {
   width: 40px;
   height: 40px;
+  color: var(--main-yellow);
 }
 
 #offers .offers div label {
@@ -227,11 +259,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 90%;
+  margin: auto;
 }
 
 #tools .tools div {
-  -webkit-box-shadow: 1px 2px 2px rgba(223, 58, 58, 0.5);
-          box-shadow: 1px 2px 2px rgba(223, 58, 58, 0.5);
+  -webkit-box-shadow: 1px 2px 2px rgba(220, 223, 58, 0.5);
+          box-shadow: 1px 2px 2px rgba(220, 223, 58, 0.5);
   border-radius: 5px;
   width: 100px;
   height: 100px;
@@ -244,33 +278,33 @@ img {
   margin: 10px auto;
 }
 
+#tools .tools div p {
+  color: var(--main-yellow);
+}
+
 #contact {
-  background: #999;
+  background: var(--main-black);
 }
 
-#contact .contact {
-  background: url("https://media.istockphoto.com/photos/look-at-ads-below-portrait-of-handsome-happy-man-in-stylish-denim-picture-id1270762037?b=1&k=6&m=1270762037&s=170667a&w=0&h=_5dyGL6CBsyBv9z4U97piLsBz2rqpQXrnIPpwAQ0ff4=") no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: var(--main-black);
-  padding-bottom: 10px;
-  padding-bottom: 15px;
+#contact .certificate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: auto;
 }
 
-#contact .contact p {
-  padding: 10px 0;
-}
-
-#contact .contact a {
-  background: green;
-  color: var(--main-white);
-  border-radius: 5px;
-  padding: 10px 80px;
-}
-
-#contact .contact a:hover {
-  background: var(--main-white);
-  color: green;
+#contact .certificate img {
+  width: 280px;
+  height: 150px;
 }
 
 #contact .quick-link img {
@@ -281,12 +315,14 @@ img {
 }
 
 #contact .quick-link .link svg {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   margin: 10px 20px;
+  background: var(--main-blue);
 }
 
-#contact blockquote, #contact cite {
+#contact blockquote,
+#contact cite {
   font-weight: bold;
 }
 
@@ -345,7 +381,6 @@ img {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 40px;
     width: 100%;
-    max-width: 1280px;
     margin: 0 auto;
     padding-bottom: 20px;
   }
@@ -354,17 +389,21 @@ img {
     transition: color 0.5s ease-out;
   }
   #project div a:hover .code {
-    color: #ff7f50;
+    color: #ffe000;
   }
   #offers .offers div {
     width: 370px;
-    height: 300px;
+    height: 420px;
   }
   #tools .tools div {
     width: 130px;
+    height: 110px;
   }
   #tools .tools div img {
     width: 80px;
+  }
+  #contact .certificate img {
+    height: 200px;
   }
   .link svg {
     margin-right: 20px;

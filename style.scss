@@ -1,9 +1,9 @@
 :root {
-  --main-white: #f0f0f0;
-  --main-black: #000;
-  --main-red: #be3144;
-  --main-blue: #c3e2f1;
-  --main-gray: #eee;
+  --main-white: #fff;
+  --main-gray: #444;
+  --main-black: #333;
+  --main-blue: #2f9bd0;
+  --main-yellow: #ffe000;
 }
 
 * {
@@ -11,7 +11,7 @@
   padding: 0;
   border: none;
   outline: none;
-  line-height: 1.5em;
+  line-height: 2em;
 }
 
 @mixin flexCenter($flow, $justify) {
@@ -31,7 +31,7 @@ body {
   font-weight: 300;
   line-height: 1.5;
   text-align: center;
-  color: var(--main-black);
+  color: var(--main-white);
 }
 
 h1,
@@ -45,7 +45,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-red);
+  background: var(--main-black);
 }
 
 .nav-list {
@@ -56,11 +56,11 @@ nav {
     display: block;
     padding: 5px 15px;
     svg {
-      height: 25px;
-      width: 25px;
+      height: 20px;
+      width: 20px;
     }
     &:hover {
-      background: var(--main-blue);
+      color: var(--main-yellow);
     }
   }
 }
@@ -71,7 +71,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--main-black);
+  color: var(--main-white);
 }
 
 img {
@@ -82,19 +82,29 @@ img {
 #welcome {
   @include flexCenter(column, center);
   margin-top: 40px;
-  background: url("https://images.unsplash.com/photo-1585247226801-bc613c441316?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60") no-repeat;
-  background-size: cover;
-  color: #00ffff;
-  .container {
-    text-shadow: 5px 2px 4px #000;
-    h1, p {
-      padding: 10px 0;
+  background: var(--main-gray);
+  h1 {
+    color: var(--main-yellow);
+  }
+  h1,
+  p {
+    padding: 5px 5px;
+  }
+  a {
+    background: var(--main-white);
+    color: var(--main-blue);
+    font-weight: bold;
+    padding: 10px 50px;
+    border-radius: 5px;
+    &:hover {
+      background: var(--main-blue);
+      color: var(--main-white);
     }
   }
 }
 
 #about {
-  background: var(--main-blue);
+  background: var(--main-black);
   img {
     width: 200px;
     height: 150px;
@@ -102,43 +112,59 @@ img {
     border-radius: 100%;
     padding: 15px 0;
   }
+  h3 {
+    color: var(--main-yellow);
+  }
   p {
-    margin-top: 10px;
+    padding: 5px 5px;
   }
 }
 
 #project {
   background: var(--main-gray);
-  p{
+  p {
     margin: 10px 0;
   }
   div {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 40px;
-    width: 280px;
+    width: 90%;
     max-width: 1280px;
     margin: auto;
     padding-bottom: 20px;
     a {
-      background: var(--main-blue);
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      background: var(--main-black);
+      box-shadow: 1px 1px 2px rgb(248, 236, 62);
       border-radius: 5px;
+      width: 280px;
+      height: 230px;
+      margin: auto;
+      padding: 10px 5px;
+      img {
+        width: 150px;
+        margin: auto;
+      }
     }
   }
 }
 
 #offers {
-  background: var(--main-blue);
+  background: var(--main-black);
+  p {
+    padding: 0 5px;
+  }
   .offers {
     @include flexCenter(wrap, space-around);
     padding-bottom: 10px;
+    width: 90%;
+    margin: auto;
     div {
       width: 280px;
-      height: 280px;
+      height: 400px;
       padding: 10px;
       margin-top: 20px;
-      box-shadow: 1px 2px 2px 2px rgba(15, 15, 15, 0.5);
+      box-shadow: 1px 2px 2px 2px rgb(248, 236, 62);
       border-radius: 10px;
       p {
         margin: 10px 0;
@@ -146,6 +172,7 @@ img {
       svg {
         width: 40px;
         height: 40px;
+        color: var(--main-yellow);
       }
       label {
         margin: 30px 0;
@@ -158,8 +185,10 @@ img {
   background-color: var(--main-gray);
   .tools {
     @include flexCenter(wrap, center);
+    width: 90%;
+    margin: auto;
     div {
-      box-shadow: 1px 2px 2px rgba(223, 58, 58, 0.5);
+      box-shadow: 1px 2px 2px rgba(220, 223, 58, 0.5);
       border-radius: 5px;
       width: 100px;
       height: 100px;
@@ -169,31 +198,22 @@ img {
         height: 50px;
         margin: 10px auto;
       }
+      p {
+        color: var(--main-yellow);
+      }
     }
   }
 }
 
 #contact {
-  .contact {
-    background: url("https://media.istockphoto.com/photos/look-at-ads-below-portrait-of-handsome-happy-man-in-stylish-denim-picture-id1270762037?b=1&k=6&m=1270762037&s=170667a&w=0&h=_5dyGL6CBsyBv9z4U97piLsBz2rqpQXrnIPpwAQ0ff4=") no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: var(--main-black);
-    padding-bottom: 10px;
-    p {
-      padding: 10px 0;
+  .certificate {
+    @include flexCenter(wrap, center);
+    width: 90%;
+    margin: auto;
+    img {
+      width: 280px;
+      height: 150px;
     }
-    a {
-      background: green;
-      color: var(--main-white);
-      border-radius: 5px;
-      padding: 10px 80px;
-      &:hover {
-        background: var(--main-white);
-        color: green;
-      }
-    }
-    padding-bottom: 15px;
   }
   .quick-link {
     img {
@@ -203,13 +223,15 @@ img {
       padding: 15px 0;
     }
     .link svg {
-      height: 25px;
-      width: 25px;
+      height: 20px;
+      width: 20px;
       margin: 10px 20px;
+      background: var(--main-blue);
     }
   }
-  background: #999;
-  blockquote, cite {
+  background: var(--main-black);
+  blockquote,
+  cite {
     font-weight: bold;
   }
 }
@@ -250,28 +272,32 @@ img {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       grid-gap: 40px;
       width: 100%;
-      max-width: 1280px;
       margin: 0 auto;
       padding-bottom: 20px;
       .code {
         transition: color 0.5s ease-out;
       }
       a:hover .code {
-        color: #ff7f50;
+        color: #ffe000;
       }
     }
   }
 
   #offers .offers div {
     width: 370px;
-    height: 300px;
+    height: 420px;
   }
 
   #tools .tools div {
     width: 130px;
+    height: 110px;
     img {
       width: 80px;
     }
+  }
+
+  #contact .certificate img {
+    height: 200px;
   }
 
   .link svg {
