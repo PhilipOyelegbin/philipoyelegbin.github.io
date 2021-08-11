@@ -126,6 +126,10 @@ img {
   padding: 5px 5px;
 }
 
+#welcome p {
+  margin-bottom: 1rem;
+}
+
 #welcome a {
   background: var(--main-white);
   color: var(--main-blue);
@@ -350,6 +354,12 @@ img {
   }
   .nav-list a {
     padding: 10px 50px;
+  }
+  #welcome {
+    margin-top: 3.5rem;
+  }
+  #welcome .container p {
+    margin-bottom: 1.5rem;
   }
   #about .container {
     display: -webkit-box;
