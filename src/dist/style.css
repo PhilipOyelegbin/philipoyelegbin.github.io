@@ -1,0 +1,150 @@
+:root {
+  --main-white: #fff;
+  --main-gray: #444;
+  --main-black: #333;
+  --main-blue: #2f9bd0;
+  --main-yellow: #ffe000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  line-height: 2em;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+  background: var(--main-black);
+  color: var(--main-white);
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+.navbar-brand {
+  font-family: "Lobster", cursive;
+  font-size: 1.5rem;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.nav-item {
+  width: 20%;
+}
+
+.nav-link {
+  margin: 0 10px;
+}
+.nav-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+#welcome {
+  background: var(--main-gray);
+}
+#welcome h1 {
+  color: var(--main-yellow);
+}
+
+.btn0 {
+  display: inline-block;
+  border-radius: 10px;
+  text-decoration: none;
+  background: var(--main-white);
+  color: var(--main-blue);
+  padding: 5px 20px;
+  font-weight: bold;
+}
+.btn0:hover {
+  background: #eee;
+}
+
+.img-fluid {
+  border-radius: 10px;
+}
+
+#project {
+  background: var(--main-gray);
+}
+#project .card {
+  margin: auto;
+  border-radius: 10px;
+}
+#project .card:hover {
+  box-shadow: -2px -1px 25px -4px var(--main-yellow);
+  transition: 0.5s;
+}
+#project .card .card-body {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+#offers .card {
+  background: var(--main-gray);
+  border-radius: 10px;
+  margin: auto;
+}
+#offers .card svg {
+  color: var(--main-yellow);
+  width: 30px;
+  height: 30px;
+}
+
+#tools {
+  background: var(--main-gray);
+}
+#tools .card {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+}
+
+form {
+  text-align: left;
+}
+form input {
+  width: 100%;
+  padding: 10px;
+}
+form textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 10px;
+}
+form input[type=submit] {
+  width: 40%;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  margin: 20px 10px;
+}
+.link svg {
+  width: 30px;
+  height: 30px;
+  background: var(--main-white);
+  border-radius: 50px;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  #tools .card {
+    margin: 10px;
+  }
+}
