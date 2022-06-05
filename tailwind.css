@@ -49,6 +49,6 @@
   }
 
   .card {
-    @apply hover:box-border hover:shadow-xl hover:shadow-yellow-400 rounded-lg;
+    @apply hover:box-border hover:shadow-xl hover:shadow-yellow-400 rounded-lg mx-auto md:mx-0;
   }
 }
