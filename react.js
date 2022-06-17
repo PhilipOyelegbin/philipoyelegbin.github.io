@@ -4,13 +4,12 @@ window.addEventListener("load", function () {
 });
 
 // menu button toggle
-document.getElementById("menu"),
-  addEventListener("click", function () {
-    document.getElementById("menuContent").classList.toggle("-left-full");
-    document.getElementById("menuContent").classList.toggle("left-0");
-    document.getElementById("close").classList.toggle("hidden");
-    document.getElementById("harmbuger").classList.toggle("hidden");
-  });
+const Menu = () => {
+  document.getElementById("menuContent").classList.toggle("-left-full");
+  document.getElementById("menuContent").classList.toggle("left-0");
+  document.getElementById("close").classList.toggle("hidden");
+  document.getElementById("harmbuger").classList.toggle("hidden");
+};
 
 // fading in and sliding in of columns
 const faders = document.querySelectorAll(".fade-in");
