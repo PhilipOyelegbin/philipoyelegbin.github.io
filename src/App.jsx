@@ -1,33 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, {useState, useEffect} from 'react'
+import About from './components/About'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+import Hero from './components/Hero'
+import Nav from './components/Nav'
+import Projects from './components/Projects'
+import Service from './components/Service'
+import Skills from './components/Skills'
+import loader from './assets/loader.gif'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  // const [load, setLoad] = useState(false);
+  // const [count, setCount] = useState(0)
+  // useEffect(() => {
+  //   while (count < 5) {
+  //     setLoad(true);
+  //     setCount(count + 1)
+  //   }
+  // }, [count])
+
+  // whatsapp chatbot
+  (function () {
+    var options = {
+      whatsapp: "+2348054945601", // WhatsApp number
+      call_to_action: "Hire me", // Call to action
+      position: "right", // Position may be 'right' or 'left'
+    };
+    var proto = document.location.protocol,
+      host = "getbutton.io",
+      url = proto + "//static." + host;
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = url + "/widget-send-button/js/init.js";
+    s.onload = function () {
+      WhWidgetSendButton.init(host, proto, options);
+    };
+    var x = document.getElementsByTagName("script")[0];
+    x.parentNode.insertBefore(s, x);
+  })();
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <>
+      {/* preloader */}
+      {/* <div className={`preloader ${load ? 'hidden' : 'flex'}`}>
+        <img src={loader} alt="loading" />
+      </div> */}
+      <Nav/>
+      <Hero/>
+      <About/>
+      <Skills/>
+      <Projects/>
+      <Service/>
+      <Contact/>
+      <Footer/>
+    </>
   )
 }
 
