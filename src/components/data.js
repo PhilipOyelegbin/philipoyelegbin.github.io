@@ -19,6 +19,7 @@ import fylo from '../assets/fylo.png';
 import nftprev from '../assets/nftprev.png';
 import tradezon from '../assets/tradezon.png';
 import oyetek from '../assets/oyetek.png';
+import demoboard from '../assets/demoboard.png';
 import binoculars from '../assets/binoculars.svg';
 import pencil from '../assets/pencil.svg';
 import columns from '../assets/columns.svg';
@@ -40,6 +41,7 @@ export const skillsData = [
 ];
 
 export const projectData = [
+    {link: "https://demoboard.netlify.app", image: demoboard, description: "Demoboard - A dashboard task from Techathon intership created using useState and useEffect while storing data into sessionStorage"},
     {link: "https://tradezon.netlify.app", image: tradezon, description: "Tradezon - An affiliate marketing website developed using React and Tailwind, carousel implemeted using slider.js"},
     {link: "https://nftprev.netlify.app", image: nftprev, description: "NFT - A design gotten from frontend-mentors developed using React and Tailwind"},
     {link: "https://myfylo.netlify.app", image: fylo, description: "Fylo - A design gotten from frontend-mentors created using React and Tailwind"},
