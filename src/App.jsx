@@ -1,23 +1,15 @@
-import React, {useState, useEffect} from 'react'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import Nav from './components/Nav'
-import Projects from './components/Projects'
-import Service from './components/Service'
-import Skills from './components/Skills'
-import loader from './assets/loader.gif'
+import React, { useEffect, useState } from 'react';
+import Loader from './components/Loader';
+import Main from './components/Main';
 
 const App = () => {
-  // const [load, setLoad] = useState(false);
-  // const [count, setCount] = useState(0)
-  // useEffect(() => {
-  //   while (count < 5) {
-  //     setLoad(true);
-  //     setCount(count + 1)
-  //   }
-  // }, [count])
+  const [load, setLoad] = useState(true);
+
+  useEffect(() => {
+      setTimeout(() => {
+          setLoad(false);
+      }, 3000);
+  }, []);
 
   // whatsapp chatbot
   (function () {
@@ -42,18 +34,9 @@ const App = () => {
 
   return (
     <>
-      {/* preloader */}
-      {/* <div className={`preloader ${load ? 'hidden' : 'flex'}`}>
-        <img src={loader} alt="loading" />
-      </div> */}
-      <Nav/>
-      <Hero/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Service/>
-      <Contact/>
-      <Footer/>
+      {
+        load === true ? <Loader /> : <Main/>
+      }
     </>
   )
 }
