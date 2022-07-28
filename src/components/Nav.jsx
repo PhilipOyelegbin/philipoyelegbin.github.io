@@ -7,8 +7,10 @@ const Nav = () => {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    open === true ? setOpen(false) : null
-  }, [2000]);
+    setTimeout(() => {
+      open === true ? setOpen(false) : null
+    }, 2000);
+  }, [open]);
   
   const handleMenuContent = () => {
     setOpen(!open)
