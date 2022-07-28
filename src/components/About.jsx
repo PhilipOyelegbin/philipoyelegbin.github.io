@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaFacebook, FaLinkedinIn, FaTwitter, FaGithub } from 'react-icons/fa';
 
 const About = () => {

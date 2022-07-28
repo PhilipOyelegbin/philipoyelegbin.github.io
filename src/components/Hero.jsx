@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Hero = () => {
   return (
     <header className="h-screen bg-hero bg-no-repeat bg-cover bg-center md:bg-right bg-fixed" id="home">

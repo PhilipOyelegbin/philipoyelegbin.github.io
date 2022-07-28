@@ -1,4 +1,3 @@
-import React from 'react'
 import { serviceData } from './data'
 
 const Service = () => {

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import { BsHouseDoorFill, BsPersonCircle, BsTools, BsBriefcaseFill, BsCartFill, BsPhoneVibrateFill } from 'react-icons/bs';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
@@ -6,9 +6,14 @@ import { FaTimes } from 'react-icons/fa';
 const Nav = () => {
   const [open, setOpen] = useState(false)
 
+  useEffect(() => {
+    open === true ? setOpen(false) : null
+  }, [2000]);
+  
   const handleMenuContent = () => {
     setOpen(!open)
-  }
+  };
+  
   return (
     <nav className="shadow-lg bg-black lg:bg-transparent px-5 py-2 flex justify-between items-center fixed top-0 w-screen z-30">
       {/* menu button */}
