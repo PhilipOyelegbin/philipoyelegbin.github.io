@@ -1,9 +1,11 @@
 import Slider from "react-slick";
-import { skillsData } from './data';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import useFetch from "../hooks/useFetch";
 
 const Skills = () => {
+  const {data} = useFetch("https://trusting-lizard-91.hasura.app/api/rest/my-skills");
+
   const settings = {
     dots: true,
     infinite: false,
@@ -68,12 +70,12 @@ const Skills = () => {
           list in searches over 70% of the time!
         </h4>
 
-        <Slider {...settings} className='w-[95%] mx-auto'>
-          {skillsData.map((obj) => {
-            return (
-              <div className="card bg-gray-700 h-24 md:h-32" key={obj.image}>
-                <img src={obj.image || ""} className="w-full h-16 rounded-t-lg md:h-24" alt="tool-image" />
-                <h3 className="text-sm text-center mb-3">{obj.title || ""}</h3>
+        <Slider {...settings} className='w-[93%] mx-auto'>
+          {data && data.skill?.map(skills => {
+            return(
+              <div className="card bg-gray-700 h-24 md:h-32" key={skills.id}>
+                <img src={skills.image || ""} className="w-full h-16 rounded-t-lg md:h-24" alt="tool-image" />
+                <h3 className="text-sm text-center mb-3">{skills.label || ""}</h3>
               </div>
             )
           })}

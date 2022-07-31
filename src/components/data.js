@@ -1,16 +1,3 @@
-import figma from '../assets/figma.png';
-import html from '../assets/html.png';
-import css from '../assets/css.png';
-import sass from '../assets/sass.png';
-import bootstrap from '../assets/bootstrap.jpg';
-import tailwind from '../assets/tailwind.png';
-import javascript from '../assets/javascript.jpg';
-import react from '../assets/react.png';
-import wordpress from '../assets/wordpress.png';
-import python from '../assets/python.jpg';
-import flask from '../assets/flask.png';
-import mysql from '../assets/mysql.png';
-import git from '../assets/git.png';
 import icrest from '../assets/icrest.png';
 import colorflipper from '../assets/colorflipper.png';
 import organic from '../assets/organic.png';
@@ -23,22 +10,6 @@ import demoboard from '../assets/demoboard.png';
 import binoculars from '../assets/binoculars.svg';
 import pencil from '../assets/pencil.svg';
 import columns from '../assets/columns.svg';
-
-export const skillsData = [
-    {image: figma, title: "Figma"},
-    {image: html, title: "HTML"},
-    {image: css, title: "CSS"},
-    {image: sass, title: "SCSS"},
-    {image: bootstrap, title: "Bootstrap"},
-    {image: tailwind, title: "Tailwind"},
-    {image: javascript, title: "JavaScript"},
-    {image: react, title: "React"},
-    {image: wordpress, title: "WordPress"},
-    {image: python, title: "Python"},
-    {image: flask, title: "Flask"},
-    {image: mysql, title: "MySQL"},
-    {image: git, title: "Git"}
-];
 
 export const projectData = [
     {link: "https://demoboard.netlify.app", image: demoboard, description: "Demoboard - A dashboard task from Techathon internship created using useState and useEffect while storing data into sessionStorage"},
