@@ -8,21 +8,22 @@ const Skills = () => {
 
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     slidesToShow: 7,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     speed: 500,
     cssEase: "linear",
     nextArrow: <NextArrow/>,
     prevArrow: <PrevArrow/>,
     initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1050,
         settings: {
           slidesToShow: 5,
-          slidesToScroll: 2,
-          dots: true
+          slidesToScroll: 1,
         }
       },
       {
