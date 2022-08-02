@@ -1,16 +1,10 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import { BsHouseDoorFill, BsPersonCircle, BsTools, BsBriefcaseFill, BsCartFill, BsPhoneVibrateFill } from 'react-icons/bs';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
-
-  useEffect(() => {
-    setTimeout(() => {
-      open === true ? setOpen(false) : null
-    }, 2000);
-  }, [open]);
   
   const handleMenuContent = () => {
     setOpen(!open)
@@ -33,27 +27,27 @@ const Nav = () => {
       <ul className={`fixed lg:flex lg:items-center lg:static bg-black lg:bg-transparent w-full lg:w-auto lg:py-0 py-4 top-10 md:top-14 transition-all ease-in-out duration-300 ${open ? 'left-0' : '-left-full'}`}>
         <li className="flex lg:flex-col mx-2 lg:mx-4 my-4 lg:my-0">
           <BsHouseDoorFill className='w-6 h-6 lg:mx-auto'/>
-          <a href="#home" className="menuLink">HOME</a>
+          <a href="#home" className="menuLink" onClick={handleMenuContent}>HOME</a>
         </li>
         <li className="flex lg:flex-col mx-2 lg:mx-4 my-4 lg:my-0">
           <BsPersonCircle className='w-6 h-6 lg:mx-auto'/>
-          <a href="#about" className="menuLink">ABOUT</a>
+          <a href="#about" className="menuLink" onClick={handleMenuContent}>ABOUT</a>
         </li>
         <li className="flex lg:flex-col mx-2 lg:mx-4 my-4 lg:my-0">
           <BsTools className='w-6 h-6 lg:mx-auto'/>
-          <a href="#skills" className="menuLink">SKILLS</a>
+          <a href="#skills" className="menuLink" onClick={handleMenuContent}>SKILLS</a>
         </li>
         <li className="flex lg:flex-col mx-2 lg:mx-4 my-4 lg:my-0">
           <BsBriefcaseFill className='w-6 h-6 lg:mx-auto'/>
-          <a href="#projects" className="menuLink">PROJECTS</a>
+          <a href="#projects" className="menuLink" onClick={handleMenuContent}>PROJECTS</a>
         </li>
         <li className="flex lg:flex-col mx-2 lg:mx-4 my-4 lg:my-0">
           <BsCartFill className='w-6 h-6 lg:mx-auto'/>
-          <a href="#service" className="menuLink">SERVICE</a>
+          <a href="#service" className="menuLink" onClick={handleMenuContent}>SERVICE</a>
         </li>
         <li className="flex lg:flex-col mx-2 lg:mx-4 my-4 lg:my-0">
           <BsPhoneVibrateFill className='w-6 h-6 lg:mx-auto'/>
-          <a href="#contact" className="menuLink">CONTACT</a>
+          <a href="#contact" className="menuLink" onClick={handleMenuContent}>CONTACT</a>
         </li>
 
         {/* Icon when menu is open. Heroicon name: outline/x Menu open: "block", Menu closed: "hidden" */}
