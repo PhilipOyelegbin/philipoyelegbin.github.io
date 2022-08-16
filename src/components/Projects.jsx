@@ -1,9 +1,11 @@
 import Slider from "react-slick";
-import { projectData } from './data';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { useFetcher } from "../hooks/useFetch";
 
 const Projects = () => {
+  const {loading, error, data} = useFetcher("https://trusting-lizard-91.hasura.app/api/rest/portfolio");
+
   const settings = {
     dots: true,
     infinite: true,
@@ -57,11 +59,11 @@ const Projects = () => {
         <h4>Click on the image below to view...</h4>
 
         <Slider {...settings} className='w-[95%] mx-auto'>
-          {projectData?.map((obj) => {
+          {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data && data.portfolio?.map(project => {
             return (
-              <a href={obj.link || "#"} target="_blank" className="card bg-gray-600 h-96" rel="noopener noreferrer" key={obj.image}>
-                <img src={obj.image || ""} className="w-full rounded-t-lg h-56" alt="tool-image" />
-                <p className="p-3">{obj.description || ""}</p>
+              <a href={project.link || "#"} target="_blank" className="card bg-gray-600 h-96" rel="noopener noreferrer" key={project.id}>
+                <img src={project.image || "Unavilable"} className="w-full rounded-t-lg h-56" alt="tool-image" />
+                <p className="p-3">{project.description || "Unavailable"}</p>
               </a>
             )
           })}

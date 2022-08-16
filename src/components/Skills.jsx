@@ -1,10 +1,11 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import useFetch from "../hooks/useFetch";
+import {useFetcher} from "../hooks/useFetch";
+
 
 const Skills = () => {
-  const {data} = useFetch("https://trusting-lizard-91.hasura.app/api/rest/my-skills");
+  const {loading, error, data} = useFetcher("https://trusting-lizard-91.hasura.app/api/rest/my-skills");
 
   const settings = {
     dots: true,
@@ -72,7 +73,7 @@ const Skills = () => {
         </h4>
 
         <Slider {...settings} className='w-[93%] mx-auto'>
-          {data && data.skill?.map(skills => {
+          {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data && data.skill?.map(skills => {
             return(
               <div className="card bg-gray-700 h-24 md:h-32" key={skills.id}>
                 <img src={skills.image || ""} className="w-full h-16 rounded-t-lg md:h-24" alt="tool-image" />
