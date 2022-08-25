@@ -19,10 +19,10 @@ const Feedback = () => {
         setRegerror('Comment cannot be empty')
     } else {
         setLoading(true);
-        fetch("https://sheet.best/api/sheets/5ca276d5-15d1-4274-9930-d6f344418fe2", {
+        fetch("https://api.steinhq.com/v1/storages/630773147bccea08c1140ad1/Sheet1", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
-          body: JSON.stringify(user)
+          body: JSON.stringify([user])
         }).then(() => {
           setLoading(false);
           setData(user);

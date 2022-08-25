@@ -1,6 +1,6 @@
 import { getData } from "../hooks/useFetch";
 const Testimonial = () => {
-    const {loading, error, data} = getData("https://sheet.best/api/sheets/5ca276d5-15d1-4274-9930-d6f344418fe2");
+    const {loading, error, data} = getData("https://api.steinhq.com/v1/storages/630773147bccea08c1140ad1/Sheet1");
     console.log(data);
   return (
     <section className="bg-gray-700 py-10">
