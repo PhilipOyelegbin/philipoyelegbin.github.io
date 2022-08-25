@@ -1,11 +1,11 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import {useFetcher} from "../hooks/useFetch";
+import {getData} from "../hooks/useFetch";
 
 
 const Skills = () => {
-  const {loading, error, data} = useFetcher("https://trusting-lizard-91.hasura.app/api/rest/my-skills");
+  const {loading, error, data} = getData("https://trusting-lizard-91.hasura.app/api/rest/my-skills");
 
   const settings = {
     dots: true,

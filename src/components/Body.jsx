@@ -1,13 +1,14 @@
 import About from './About';
-import Contact from './Contact';
+import Feedback from './Feedback';
 import Footer from './Footer';
 import Hero from './Hero';
 import Nav from './Nav';
 import Projects from './Projects';
 import Service from './Service';
 import Skills from './Skills';
+import Testimonial from './Testimonial';
 
-const Main = () => {
+const Body = () => {
   return (
     <>
         <Nav/>
@@ -16,10 +17,11 @@ const Main = () => {
         <Skills/>
         <Projects/>
         <Service/>
-        <Contact/>
+        <Feedback/>
+        <Testimonial/>
         <Footer/>
     </>
   )
 }
 
-export default Main
+export default Body

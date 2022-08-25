@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { BsHouseDoorFill, BsPersonCircle, BsTools, BsBriefcaseFill, BsCartFill, BsPhoneVibrateFill } from 'react-icons/bs';
+import { BsHouseDoorFill, BsPersonCircle, BsTools, BsBriefcaseFill, BsCartFill, BsFillChatDotsFill } from 'react-icons/bs';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
 
@@ -46,8 +46,8 @@ const Nav = () => {
           <a href="#service" className="menuLink" onClick={handleMenuContent}>SERVICE</a>
         </li>
         <li className="flex lg:flex-col mx-2 lg:mx-4 my-4 lg:my-0">
-          <BsPhoneVibrateFill className='w-6 h-6 lg:mx-auto'/>
-          <a href="#contact" className="menuLink" onClick={handleMenuContent}>CONTACT</a>
+          <BsFillChatDotsFill className='w-6 h-6 lg:mx-auto'/>
+          <a href="#testimonial" className="menuLink" onClick={handleMenuContent}>TESTIMONIAL</a>
         </li>
 
         {/* Icon when menu is open. Heroicon name: outline/x Menu open: "block", Menu closed: "hidden" */}

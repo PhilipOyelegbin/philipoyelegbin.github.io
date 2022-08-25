@@ -14,8 +14,7 @@
 
 @layer base {
   *, ::before, ::after {
-    @apply m-0 p-0 scroll-smooth;
-    box-sizing: border-box;
+    @apply m-0 p-0 scroll-smooth box-border;
   }
 
   body {
@@ -51,5 +50,13 @@
 
   .card {
     @apply w-[300px] h-fit hover:box-border hover:shadow-xl outline-none hover:shadow-yellow-400 overflow-hidden mt-1 p-2 rounded-md;
+  }
+
+  .form-control {
+    @apply flex flex-col my-5 w-full;
+  }
+
+  .form-control input, textarea {
+    @apply bg-slate-300 text-black mb-2 p-2 rounded-md w-full focus:outline-none;
   }
 }

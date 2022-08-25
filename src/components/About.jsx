@@ -1,4 +1,5 @@
 import { FaFacebook, FaLinkedinIn, FaTwitter, FaGithub } from 'react-icons/fa';
+import avatar from '../assets/avatar.jpg'
 
 const About = () => {
   return (
@@ -6,7 +7,7 @@ const About = () => {
       <div className="container mx-auto px-5">
         <div className="md:flex md:flex-flow md:justify-between items-center">
           <div className="md:w-1/2 md:mr-2">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQF4gdUWYEuGLw/profile-displayphoto-shrink_100_100/0/1653984569975?e=1659571200&v=beta&t=LWshJ9QU3OiY9tOLFd0POpl49EooFvfzr7kz6DKVlK0" className="rounded-lg mx-auto w-72 md:w-96 h-72 md:h-96" alt="profile_picture"/>
+            <img src={avatar} className="rounded-lg mx-auto w-72 md:w-96 h-72 md:h-96" alt="profile_picture"/>
 
             <div className="mt-3 flex mx-auto w-fit px-4 py-2 rounded-full text-slate-300">
               <a className="mx-3" href="https://linkedin.com/in/PhilipOyelegbin" target="_blank" rel="noopener noreferrer"><FaLinkedinIn className='w-6 h-6'/></a>

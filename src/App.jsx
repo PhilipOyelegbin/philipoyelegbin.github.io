@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Body from './components/Body';
 import Loader from './components/Loader';
-import Main from './components/Main';
 
 const App = () => {
   const [load, setLoad] = useState(true);
@@ -35,7 +35,7 @@ const App = () => {
   return (
     <>
       {
-        load === true ? <Loader /> : <Main/>
+        load === true ? <Loader /> : <Body/>
       }
     </>
   )
