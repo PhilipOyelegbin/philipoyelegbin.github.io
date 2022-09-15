@@ -56,7 +56,7 @@ const Projects = () => {
     <section className="bg-gray-700 text-center py-10" id="projects">
       <div className="container mx-auto px-5">
         <h2>MY WORKS</h2>
-        <p>Here is a selection of my most recent work, <strong>click on the card below to view</strong>. View the remainder of my work on <a href="https://github.com/PeterOyelegbin" className="text-yellow-500">GitHub</a>.</p>
+        <p>Here is a selection of my most recent work, <strong>click on the card below to view</strong>. View the remainder of my work on <a href="https://github.com/PhilipOyelegbin" className="text-yellow-500">GitHub</a>.</p>
 
         <Slider {...settings} className='w-[95%] mx-auto'>
           {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data && data.portfolio?.map(project => {
