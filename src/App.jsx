@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Body from './components/Body';
 import Loader from './components/Loader';
+import 'animate.css';
 
 const App = () => {
   const [load, setLoad] = useState(true);

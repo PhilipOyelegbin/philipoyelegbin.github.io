@@ -1,24 +1,16 @@
-import { useEffect, useState } from 'react';
+import useSWR from 'swr';
+import axios from 'axios';
+
+const fetcher = (url) => axios.get(url).then(res => res.data);
 
 export const getData = (url) => {
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                setData(data);
-                setLoading(false);
-            })
-            .catch(err => {
-                setError(err && "Unable to fetch data!");
-                setLoading(false);
-            });       
-    }, [url])
+    const {data, error} = useSWR(url, fetcher, {
+        refreshInterval: 0,
+        revalidateOnMount: true,
+        revalidateOnReconnect: true,
+    })
 
     return (
-        {loading, error, data}
+        {data, error, loading: !data && !error}
     );
 }

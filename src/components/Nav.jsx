@@ -20,7 +20,7 @@ const Nav = () => {
 
       {/* logo */}
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl md:text-4xl font-bold text-yellow-400">Philip Oyelegbin</h1>
+        <h1 className="logo text-2xl md:text-4xl font-bold text-yellow-400">Philip Oyelegbin</h1>
       </div>
 
       {/* menu content */}

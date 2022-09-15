@@ -64,13 +64,7 @@ const Skills = () => {
     <section className="bg-gray-600 text-center py-10" id="skills">
       <div className="container mx-auto px-5">
         <h2>MY SKILLS</h2>
-
-        <h4>
-          For those that know what they're checking out. We build beautiful,
-          search engine optimized websites for businesses which ensures
-          increased productivity and credibility plus your business gets top
-          list in searches over 70% of the time!
-        </h4>
+        <p>For those that know what they're checking out. I build beautiful, search engine optimized websites for businesses which ensures increased productivity and credibility plus your business gets <strong>top list in searches over 70% of the time!</strong></p>
 
         <Slider {...settings} className='w-[93%] mx-auto'>
           {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data && data.skill?.map(skills => {

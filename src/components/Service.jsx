@@ -13,7 +13,7 @@ const Service = () => {
     <section className="bg-gray-600 text-center py-10" id="service">
       <div className="container mx-auto px-5">
         <h2>ACTUALIZATION</h2>
-        <h4>Web design for businesses! From conception to product UI/UX and developing web pages, I've got you covered. <strong>Here's how it works</strong></h4>
+        <p>Web design for businesses! From conception to product UI/UX and developing web pages, I've got you covered. <strong>Here's how it works</strong></p>
 
         {/* grid view of the services in a container */}
         <div className="grid grid-flow-row grid-cols-1 gap-5 mt-5 lg:grid-cols-3">

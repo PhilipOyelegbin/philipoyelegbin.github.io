@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
 
 @tailwind base;
@@ -14,7 +15,7 @@
 
 @layer base {
   *, ::before, ::after {
-    @apply m-0 p-0 scroll-smooth box-border;
+    @apply m-0 p-0 scroll-smooth box-border leading-6;
   }
 
   body {
@@ -40,6 +41,10 @@
     @apply bg-center bg-cover bg-no-repeat w-screen h-screen bg-white z-30 top-0 left-0 fixed flex justify-center items-center transition-transform ease-in-out;
   }
 
+  .logo {
+    font-family: 'Pacifico', cursive;
+  }
+
   .menuLink {
     @apply text-lg ml-2 hover:text-yellow-400 duration-500 md:ml-0;
   }
@@ -53,7 +58,7 @@
   }
 
   .form-control {
-    @apply flex flex-col my-5 w-full;
+    @apply flex flex-col my-3 w-full;
   }
 
   .form-control input, textarea {
