@@ -11,7 +11,7 @@ const Nav = () => {
   };
   
   return (
-    <nav className="shadow-lg bg-black lg:bg-transparent px-5 py-2 flex justify-between items-center fixed top-0 w-screen z-30">
+    <nav className="shadow-lg bg-black lg:bg-opacity-60 px-5 py-2 flex justify-between items-center fixed top-0 w-screen z-30 lg:px-10">
       {/* menu button */}
       <button className="text-4xl cursor-pointer lg:hidden block" onClick={handleMenuContent}>
         {/* Icon when menu is closed. Heroicon name: outline/menu Menu open: "hidden", Menu closed: "block" */}

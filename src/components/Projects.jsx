@@ -53,22 +53,20 @@ const Projects = () => {
     );
   }
   return (
-    <section className="bg-gray-700 text-center py-10" id="projects">
-      <div className="container mx-auto px-5">
-        <h2>MY WORKS</h2>
-        <p>Here is a selection of my most recent work, <strong>click on the card below to view</strong>. View the remainder of my work on <a href="https://github.com/PhilipOyelegbin" className="text-yellow-500">GitHub</a>.</p>
+    <section className="bg-gray-700 text-center mx-auto px-5 py-10 xl:px-10" id="projects">
+      <h2>MY WORKS</h2>
+      <p className="lg:text-center">Here is a selection of my most recent work, <strong>click on the card below to view</strong>. View the remainder of my work on <a href="https://github.com/PhilipOyelegbin" className="text-yellow-500">GitHub</a>.</p>
 
-        <Slider {...settings} className='w-[95%] mx-auto'>
-          {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data && data.portfolio?.map(project => {
-            return (
-              <a href={project.link || "#"} target="_blank" className="card bg-gray-600 h-96" rel="noopener noreferrer" key={project.id}>
-                <img src={project.image || "Unavilable"} className="w-full rounded-t-lg h-56" alt="tool-image" />
-                <p className="p-3">{project.description || "Unavailable"}</p>
-              </a>
-            )
-          })}
-        </Slider>
-      </div>
+      <Slider {...settings} className='w-[95%] mx-auto'>
+        {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data && data.portfolio?.map(project => {
+          return (
+            <a href={project.link || "#"} target="_blank" className="card bg-gray-600 h-96" rel="noopener noreferrer" key={project.id}>
+              <img src={project.image || "Unavilable"} className="w-full rounded-t-lg h-56" alt="tool-image" />
+              <p className="p-3">{project.description || "Unavailable"}</p>
+            </a>
+          )
+        })}
+      </Slider>
     </section>
   )
 }

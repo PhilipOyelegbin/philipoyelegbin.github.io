@@ -7,8 +7,8 @@ const App = () => {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
-      setTimeout(() => {
-          setLoad(false);
+      setInterval(() => {
+        setLoad(false);
       }, 3000);
   }, []);
 

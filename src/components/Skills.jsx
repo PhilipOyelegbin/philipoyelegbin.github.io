@@ -61,22 +61,20 @@ const Skills = () => {
   }
 
   return (
-    <section className="bg-gray-600 text-center py-10" id="skills">
-      <div className="container mx-auto px-5">
-        <h2>MY SKILLS</h2>
-        <p>For those that know what they're checking out. I build beautiful, search engine optimized websites for businesses which ensures increased productivity and credibility plus your business gets <strong>top list in searches over 70% of the time!</strong></p>
+    <section className="bg-gray-600 text-center mx-auto px-5 py-10 xl:px-10" id="skills">
+      <h2>MY SKILLS</h2>
+      <p className="xl:text-center">For those that know what they're checking out. I build beautiful, search engine optimized websites for businesses which ensures increased productivity and credibility plus your business gets <strong>top list in searches over 70% of the time!</strong></p>
 
-        <Slider {...settings} className='w-[93%] mx-auto'>
-          {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data && data.skill?.map(skills => {
-            return(
-              <div className="card bg-gray-700 h-24 md:h-32" key={skills.id}>
-                <img src={skills.image || ""} className="w-full h-16 rounded-t-lg md:h-24" alt="tool-image" />
-                <h3 className="text-sm text-center mb-3">{skills.label || ""}</h3>
-              </div>
-            )
-          })}
-        </Slider>
-      </div>
+      <Slider {...settings} className='w-[93%] mx-auto'>
+        {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data && data.skill?.map(skills => {
+          return(
+            <div className="card bg-gray-700 h-24 md:h-32" key={skills.id}>
+              <img src={skills.image || ""} className="w-full h-16 rounded-t-lg md:h-24" alt="tool-image" />
+              <h3 className="text-sm text-center mb-3">{skills.label || ""}</h3>
+            </div>
+          )
+        })}
+      </Slider>
     </section>
   )
 }

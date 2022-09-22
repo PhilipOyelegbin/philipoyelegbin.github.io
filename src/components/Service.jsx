@@ -10,27 +10,25 @@ const Service = () => {
   ];
 
   return (
-    <section className="bg-gray-600 text-center py-10" id="service">
-      <div className="container mx-auto px-5">
-        <h2>ACTUALIZATION</h2>
-        <p>Web design for businesses! From conception to product UI/UX and developing web pages, I've got you covered. <strong>Here's how it works</strong></p>
+    <section className="bg-gray-600 text-center mx-auto px-5 py-10 xl:px-10" id="service">
+      <h2>ACTUALIZATION</h2>
+      <p className='lg:text-center'>Web design for businesses! From conception to product UI/UX and developing web pages, I've got you covered. <strong>Here's how it works</strong></p>
 
-        {/* grid view of the services in a container */}
-        <div className="grid grid-flow-row grid-cols-1 gap-5 mt-5 lg:grid-cols-3">
-          {services?.map(service => {
-            return (
-              <div className="card bg-gray-700 w-11/12 mx-auto lg:h-72" key={service.id}>
-                <figure>
-                  <img className='mx-auto' src={service.icon || ""} alt="icon" />
-                  <figcaption className="p-3">
-                    <h3 className='text-xl text-center font-bold'>{service.title || ""}</h3>
-                    <p>{service.summary || ""}</p>
-                  </figcaption>
-                </figure>
-              </div>
-            )
-          })}
-        </div>
+      {/* grid view of the services in a container */}
+      <div className="grid grid-flow-row grid-cols-1 gap-5 mt-5 lg:grid-cols-3">
+        {services?.map(service => {
+          return (
+            <div className="card bg-gray-700 w-11/12 mx-auto lg:h-72" key={service.id}>
+              <figure>
+                <img className='mx-auto' src={service.icon || ""} alt="icon" />
+                <figcaption className="p-3">
+                  <h3 className='text-xl text-center font-bold'>{service.title || ""}</h3>
+                  <p>{service.summary || ""}</p>
+                </figcaption>
+              </figure>
+            </div>
+          )
+        })}
       </div>
     </section>
   )
