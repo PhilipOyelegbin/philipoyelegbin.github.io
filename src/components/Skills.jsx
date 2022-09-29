@@ -68,10 +68,12 @@ const Skills = () => {
       <Slider {...settings} className='w-[93%] mx-auto'>
         {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data && data.skill?.map(skills => {
           return(
-            <div className="card bg-gray-700 h-24 md:h-32" key={skills.id}>
+            <figure className="card bg-gray-700 h-24 md:h-32" key={skills.id}>
               <img src={skills.image || ""} className="w-full h-16 rounded-t-lg md:h-24" alt="tool-image" />
-              <h3 className="text-sm text-center mb-3">{skills.label || ""}</h3>
-            </div>
+              <figcaption>
+                <h3 className="text-sm text-center mb-3">{skills.label || ""}</h3>
+              </figcaption>
+            </figure>
           )
         })}
       </Slider>

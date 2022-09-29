@@ -7,7 +7,7 @@ const Hero = () => {
 
           <h3 className="font-extrabold text-slate-300 text-xl mt-5 md:text-3xl">You are never offline! <strong>Stay ahead of you industry</strong> and in front of your clients wherever they may be, round the clock.</h3>
 
-          <a className="btn" href="https://drive.google.com/file/d/1mXuH9LeHOygHlqw5rgqWqO72qZie-SvF/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+          <a className="btn" href="https://drive.google.com/file/d/1mXuH9LeHOygHlqw5rgqWqO72qZie-SvF/view?usp=sharing" target="_blank" rel="noopener noreferrer">My CV</a>
         </div>
       </div>
     </header>
