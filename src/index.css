@@ -46,15 +46,15 @@
   }
 
   .menuLink {
-    @apply text-lg ml-2 hover:text-yellow-400 duration-500 md:ml-0;
+    @apply text-lg ml-2 ease-linear duration-300 hover:text-yellow-400 md:ml-0;
   }
 
   .btn {
-    @apply inline-block bg-gradient-to-r from-yellow-700 to-yellow-400 hover:bg-gradient-to-bl hover:from-yellow-700 hover:to-yellow-400 rounded-full text-2xl text-slate-200 py-3 px-8 mt-10;
+    @apply inline-block bg-gradient-to-r from-yellow-700 to-yellow-400 ease-linear duration-300 hover:bg-gradient-to-bl hover:from-yellow-700 hover:to-yellow-400 rounded-full text-2xl text-slate-200 py-3 px-8 mt-10;
   }
 
   .card {
-    @apply w-[300px] h-fit hover:box-border hover:shadow-xl outline-none hover:shadow-yellow-400 overflow-hidden mt-1 p-2 rounded-md;
+    @apply w-[300px] h-fit ease-linear duration-300 hover:box-border hover:shadow-md outline-none hover:shadow-yellow-400 overflow-hidden mt-1 p-2 rounded-md;
   }
 
   .form-control {
@@ -62,6 +62,6 @@
   }
 
   .form-control input, textarea {
-    @apply bg-slate-300 text-black mb-2 p-2 rounded-md w-full focus:outline-none;
+    @apply bg-slate-300 text-black mb-2 p-2 rounded-md w-full focus:outline-none border invalid:border-red-500 valid:border-lime-500;
   }
 }

@@ -61,15 +61,15 @@ const Feedback = () => {
           <form onSubmit={handleSend} autoComplete="false">
             <div className="form-control">
               <label htmlFor="Name">Full name:</label>
-              <input id="Name" type="text" name="Name" value={user.Name} onChange={handleChange} placeholder="Enter your full name" required/>
+              <input id="Name" type="text" name="Name" value={user.Name} onChange={handleChange} minLength="4" maxLength="50" placeholder="Enter your full name" required/>
             </div>
             <div className="form-control">
               <label htmlFor="Email">Email:</label>
-              <input id="Email" type="Email" name="Email" value={user.Email} onChange={handleChange} placeholder="Enter your email" required/>
+              <input id="Email" type="Email" name="Email" value={user.Email} onChange={handleChange} minLength="8" maxLength="50" placeholder="Enter your email" required/>
             </div>
             <div className="form-control">
-              <label htmlFor="Testimonial">Comment:</label> 
-              <textarea id="Testimonial" name="Testimonial" cols="30" rows="5" value={user.Testimonial} onChange={handleChange} placeholder="Write your message here..." required></textarea>
+              <label htmlFor="Testimonial">Comment:</label>
+              <textarea id="Testimonial" name="Testimonial" cols="30" rows="5" value={user.Testimonial} onChange={handleChange} minLength="50" maxLength="150" placeholder="Write your message here..." required></textarea>
             </div>
             <div className='flex justify-center gap-2 my-2'>
                 {stars.map((_, index) => {
