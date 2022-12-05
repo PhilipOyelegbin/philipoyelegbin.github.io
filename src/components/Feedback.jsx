@@ -1,42 +1,24 @@
 import { useState } from "react";
-import axios from "axios";
 import { FaStar } from 'react-icons/fa'
+import axios from "axios";
 
-const Feedback = () => {
-  const colors = {
-    white: "FFF", grey: "#CCC"
-  };
-  const stars = Array(5).fill(0);
-  const [current, setCurrent] = useState(0);
-  const [hover, setHover] = useState(undefined);
-  
+const Feedback = () => {  
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [data, setData] = useState(null);
 
-  const handleRate = value => {
-    setCurrent(value)
-  };
-
-  const handleMouseDown = value => {
-    setHover(value)
-  };
-
-  const handleMouseUp = () => {
-    setHover(undefined)
-  };
-
   const [user, setUser] = useState({
-    Name: "", Email: "", Testimonial: ""
+    Name: "", Email: "", Testimonial: "", Rating: 10
   });
+
+  const disabledState = (user.Name === "" || user.Email === "" || user.Testimonial === "")
 
   const handleSend = (e) => {
     e.preventDefault();
     let userRating = {
-      Name: user.Name, Email: user.Email, Testimonial: user.Testimonial, Rating: current
+      Name: user.Name, Email: user.Email, Testimonial: user.Testimonial, Rating: user.Rating
     }
     setLoading(true);
-    console.log(userRating);
     axios.post("https://api.steinhq.com/v1/storages/630773147bccea08c1140ad1/Sheet1",
       [userRating]).then(() => {
       setLoading(false);
@@ -60,6 +42,10 @@ const Feedback = () => {
           <h3 className="text-2xl font-extrabold mb-3">I will love to hear your feedback</h3>
           <form onSubmit={handleSend} autoComplete="false">
             <div className="form-control">
+              <label htmlFor="rating" className="flex items-center gap-1">Rate my service: {user.Rating}<FaStar className="text-base text-slate-700"/></label>
+              <input type="range" name="Rating" min={0} max={10} value={user.Rating} onChange={handleChange} />
+            </div>
+            <div className="form-control">
               <label htmlFor="Name">Full name:</label>
               <input id="Name" type="text" name="Name" value={user.Name} onChange={handleChange} minLength="4" maxLength="50" placeholder="Enter your full name" required/>
             </div>
@@ -71,15 +57,10 @@ const Feedback = () => {
               <label htmlFor="Testimonial">Comment:</label>
               <textarea id="Testimonial" name="Testimonial" cols="30" rows="5" value={user.Testimonial} onChange={handleChange} minLength="50" maxLength="150" placeholder="Write your message here..." required></textarea>
             </div>
-            <div className='flex justify-center gap-2 my-2'>
-                {stars.map((_, index) => {
-                  return <FaStar key={index} className="cursor-pointer" onClick={() => handleRate(index + 1)} color={(hover || current) > index ? colors.white : colors.grey} onMouseOver={() => handleMouseDown(index + 1)} onMouseLeave={handleMouseUp}/>
-                })}
-              </div>
 
             {loading ? <p className='text-center text-white my-3'>Sending...</p> : error ? <p className='text-center text-red-500 my-3'>{error}</p> : data && <p className='text-center text-white my-3'>Feedback sent!</p>}
 
-            <button type="submit" className="bg-gray-700 text-slate-200 px-4 py-2 rounded-lg">SEND</button>
+            <button type="submit" disabled={disabledState} className="bg-gray-700 text-slate-200 px-4 py-2 rounded-lg ease-linear duration-300 disabled:bg-gray-400">SEND</button>
           </form>
         </div>
       </div>
