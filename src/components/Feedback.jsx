@@ -8,7 +8,7 @@ const Feedback = () => {
   const [data, setData] = useState(null);
 
   const [user, setUser] = useState({
-    Name: "", Email: "", Testimonial: "", Rating: 10
+    Name: "", Email: "", Testimonial: "", Rating: 5
   });
 
   const disabledState = (user.Name === "" || user.Email === "" || user.Testimonial === "")
@@ -19,8 +19,8 @@ const Feedback = () => {
       Name: user.Name, Email: user.Email, Testimonial: user.Testimonial, Rating: user.Rating
     }
     setLoading(true);
-    axios.post("https://api.steinhq.com/v1/storages/630773147bccea08c1140ad1/Sheet1",
-      [userRating]).then(() => {
+    axios.post("https://portfolio-api.up.railway.app/philip-reviews",
+      userRating).then(() => {
       setLoading(false);
       setData(userRating);
     }).catch(error => {
@@ -43,7 +43,7 @@ const Feedback = () => {
           <form onSubmit={handleSend} autoComplete="false">
             <div className="form-control">
               <label htmlFor="rating" className="flex items-center gap-1">Rate my service: {user.Rating}<FaStar className="text-base text-slate-700"/></label>
-              <input type="range" name="Rating" min={0} max={10} value={user.Rating} onChange={handleChange} />
+              <input type="range" name="Rating" min={0} max={5} value={user.Rating} onChange={handleChange} />
             </div>
             <div className="form-control">
               <label htmlFor="Name">Full name:</label>
