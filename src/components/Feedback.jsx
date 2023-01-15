@@ -20,7 +20,7 @@ const Feedback = () => {
     }
     setLoading(true);
     axios.post("https://portfolio-api.up.railway.app/philip-reviews",
-      userRating).then(() => {
+      [userRating]).then(() => {
       setLoading(false);
       setData(userRating);
     }).catch(error => {

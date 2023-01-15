@@ -1,20 +1,31 @@
 import Slider from "react-slick";
+import figma from '../assets/figma.png';
+import html from "../assets/html.png"
+import css from "../assets/css.png"
+import sass from "../assets/sass.png"
+import bootstrap from "../assets/bootstrap.jpg"
+import tailwind from "../assets/tailwind.png"
+import javascript from "../assets/javascript.png"
+import react from "../assets/react.png"
+import redux from "../assets/redux.png"
+import git from "../assets/git.png"
+import vs_code from "../assets/vs-code.jpg"
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
 const Skills = () => {
   const skills = [
-    {cover_image: "", label: "Figma"},
-    {cover_image: "", label: "HTML"},
-    {cover_image: "", label: "CSS"},
-    {cover_image: "", label: "SCSS"},
-    {cover_image: "", label: "Bootsrap"},
-    {cover_image: "", label: "Tailwind"},
-    {cover_image: "", label: "JavaScript"},
-    {cover_image: "", label: "React"},
-    {cover_image: "", label: "Redux"},
-    {cover_image: "", label: "Git"},
-    {cover_image: "", label: "VS Code"},
+    {cover_image: figma, label: "Figma"},
+    {cover_image: html, label: "HTML"},
+    {cover_image: css, label: "CSS"},
+    {cover_image: sass, label: "Sass"},
+    {cover_image: bootstrap, label: "Bootsrap"},
+    {cover_image: tailwind, label: "Tailwind"},
+    {cover_image: javascript, label: "JavaScript"},
+    {cover_image: react, label: "React"},
+    {cover_image: redux, label: "Redux"},
+    {cover_image: git, label: "Git"},
+    {cover_image: vs_code, label: "VS Code"},
   ]
 
   const settings = {
@@ -79,7 +90,7 @@ const Skills = () => {
         {skills?.map((skill, index) => {
           return(
             <figure className="card bg-gray-700 hover:shadow-md hover:shadow-gray-500 h-24 md:h-32" key={index}>
-              <img src={skill.cover_image || ""} className="w-full h-16 rounded-t-lg md:h-24" alt="tool-image" />
+              <img src={skill.cover_image || ""} loading="lazy" className="w-full h-16 rounded-t-lg md:h-24" alt="tool-image" />
               <figcaption>
                 <h3 className="text-sm text-center mb-3">{skill.label || ""}</h3>
               </figcaption>

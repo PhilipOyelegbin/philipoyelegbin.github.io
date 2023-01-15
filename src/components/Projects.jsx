@@ -10,7 +10,7 @@ const Projects = () => {
     dots: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     speed: 500,
     cssEase: "linear",
     nextArrow: <NextArrow/>,
@@ -60,9 +60,12 @@ const Projects = () => {
       <Slider {...settings} className='w-[95%] mx-auto'>
         {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data.results && data.results?.map(project => {
           return (
-            <a href={project.link || "#"} target="_blank" rel="noopener noreferrer" className="card bg-gray-600 h-96" key={project.id}>
-              <img src={project.image || "Unavilable"} className="w-full rounded-t-lg h-56" alt="tool-image" />
-              <p className="p-3">{project.description || "Unavailable"}</p>
+            <a href={project.link || "#"} target="_blank" rel="noopener noreferrer" className="card bg-gray-600 hover:shadow-md hover:shadow-gray-500 h-96" key={project.id}>
+              <img src={project.cover_image || "Unavailable"} className="w-full rounded-t-lg h-56" alt="tool-image" />
+              <div className="p-3">
+                <h3 className="text-xl">{project.name || "Unavailable"}</h3>
+                <p className="text-sm">{project.description || "Unavailable"}</p>
+              </div>
             </a>
           )
         })}
