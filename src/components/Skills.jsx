@@ -1,15 +1,15 @@
 import Slider from "react-slick";
-import figma from '../assets/figma.png';
-import html from "../assets/html.png"
-import css from "../assets/css.png"
-import sass from "../assets/sass.png"
-import bootstrap from "../assets/bootstrap.jpg"
-import tailwind from "../assets/tailwind.png"
-import javascript from "../assets/javascript.png"
-import react from "../assets/react.png"
-import redux from "../assets/redux.png"
-import git from "../assets/git.png"
-import vs_code from "../assets/vs-code.jpg"
+import figma from '/src/assets/figma.png';
+import html from "/src/assets/html.png"
+import css from "/src/assets/css.png"
+import sass from "/src/assets/sass.png"
+import bootstrap from "/src/assets/bootstrap.jpg"
+import tailwind from "/src/assets/tailwind.png"
+import javascript from "/src/assets/javascript.png"
+import react from "/src/assets/react.png"
+import redux from "/src/assets/redux.png"
+import git from "/src/assets/git.png"
+import vs_code from "/src/assets/vs-code.jpg"
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
