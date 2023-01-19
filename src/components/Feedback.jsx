@@ -8,23 +8,24 @@ const Feedback = () => {
   const [data, setData] = useState(null);
 
   const [user, setUser] = useState({
-    Name: "", Email: "", Testimonial: "", Rating: 5
+    full_name: "", email: "", comment: "", ratings: 5
   });
 
-  const disabledState = (user.Name === "" || user.Email === "" || user.Testimonial === "")
+  const disabledState = (user.full_name === "" || user.email === "" || user.comment === "")
 
   const handleSend = (e) => {
     e.preventDefault();
     let userRating = {
-      Name: user.Name, Email: user.Email, Testimonial: user.Testimonial, Rating: user.Rating
+      full_name: user.full_name, email: user.email, comment: user.comment, ratings: user.ratings
     }
     setLoading(true);
     axios.post("https://portfolio-api.up.railway.app/philip-reviews",
-      [userRating]).then(() => {
+      userRating).then(() => {
       setLoading(false);
       setData(userRating);
     }).catch(error => {
       setLoading(false);
+      console.log(error);
       setError(error.message && "Unable to send feedback!");
     });
   };
@@ -42,20 +43,20 @@ const Feedback = () => {
           <h3 className="text-2xl font-extrabold mb-3">I will love to hear your feedback</h3>
           <form onSubmit={handleSend} autoComplete="false">
             <div className="form-control">
-              <label htmlFor="rating" className="flex items-center gap-1">Rate my service: {user.Rating}<FaStar className="text-base text-slate-700"/></label>
-              <input type="range" name="Rating" min={0} max={5} value={user.Rating} onChange={handleChange} />
+              <label htmlFor="rating" className="flex items-center gap-1">Rate my service: {user.ratings}<FaStar className="text-base text-slate-700"/></label>
+              <input type="range" name="ratings" min={0} max={5} value={user.ratings} onChange={handleChange} />
             </div>
             <div className="form-control">
-              <label htmlFor="Name">Full name:</label>
-              <input id="Name" type="text" name="Name" value={user.Name} onChange={handleChange} minLength="4" maxLength="50" placeholder="Enter your full name" required/>
+              <label htmlFor="full_name">Full name:</label>
+              <input id="full_name" type="text" name="full_name" value={user.full_name} onChange={handleChange} minLength="4" maxLength="50" placeholder="Enter your full name" required/>
             </div>
             <div className="form-control">
-              <label htmlFor="Email">Email:</label>
-              <input id="Email" type="Email" name="Email" value={user.Email} onChange={handleChange} minLength="8" maxLength="50" placeholder="Enter your email" required/>
+              <label htmlFor="email">Email:</label>
+              <input id="email" type="email" name="email" value={user.email} onChange={handleChange} minLength="8" maxLength="50" placeholder="Enter your email" required/>
             </div>
             <div className="form-control">
-              <label htmlFor="Testimonial">Comment:</label>
-              <textarea id="Testimonial" name="Testimonial" cols="30" rows="5" value={user.Testimonial} onChange={handleChange} minLength="50" maxLength="150" placeholder="Write your message here..." required></textarea>
+              <label htmlFor="comment">Comment:</label>
+              <textarea id="comment" name="comment" cols="30" rows="5" value={user.comment} onChange={handleChange} minLength="50" maxLength="150" placeholder="Write your message here..." required></textarea>
             </div>
 
             {loading ? <p className='text-center text-white my-3'>Sending...</p> : error ? <p className='text-center text-red-500 my-3'>{error}</p> : data && <p className='text-center text-white my-3'>Feedback sent!</p>}
