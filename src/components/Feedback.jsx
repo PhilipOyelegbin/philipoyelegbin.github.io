@@ -28,6 +28,9 @@ const Feedback = () => {
       console.log(error);
       setError(error.message && "Unable to send feedback!");
     });
+    setUser({
+      full_name: "", email: "", comment: "", ratings: 5
+    })
   };
 
   const handleChange = (e) => {
