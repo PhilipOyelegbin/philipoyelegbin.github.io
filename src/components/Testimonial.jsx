@@ -4,7 +4,7 @@ const Testimonial = () => {
     const {loading, error, data} = getData("https://portfolio-api.up.railway.app/philip-reviews");
     
   return (
-    <section className="bg-gray-700 px-5 py-10 xl:px-10">
+    <section className="px-5 py-10 xl:px-10">
         <h2 className="text-center">TESTIMONIAL</h2>
         <div className="flex flex-wrap justify-center gap-5">
             {loading ? <p className="text-2xl text-center">Loading...</p> : error ? <p className="text-2xl text-center">Unable to load testimonial</p> : data.results.length < 1 ? <p className="text-2xl text-center">No testimonial yet...</p> : data.results && data.results?.map(testimony =>

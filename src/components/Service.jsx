@@ -2,7 +2,7 @@ import { Services } from "./data"
 
 const Service = () => {
   return (
-    <section className="bg-gray-600 text-center mx-auto px-5 py-10 xl:px-10" id="service">
+    <section className="text-center mx-auto px-5 py-10 xl:px-10" id="service">
       <h2>ACTUALIZATION</h2>
       <p className='lg:text-center'>Web design for businesses! From conception to product UI/UX and developing web pages, I've got you covered. <strong>Here's how it works</strong></p>
 

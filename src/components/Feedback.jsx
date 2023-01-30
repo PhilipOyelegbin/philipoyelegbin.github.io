@@ -38,7 +38,7 @@ const Feedback = () => {
   };
 
   return (
-    <section className="bg-gray-700 shadow-lg flex flex-row items-center mx-auto px-5 py-10 xl:px-10" id="testimonial">
+    <section className="shadow-lg flex flex-row items-center mx-auto px-5 py-10 xl:px-10" id="testimonial">
       <div
         className="lg:w-3/5 w-full bg-gradient-to-r from-yellow-700 to-yellow-400 lg:from-yellow-700 lg:via-yellow-400 lg:to-transparent rounded-lg text-white p-5">
         {/* container holding the contact form */}

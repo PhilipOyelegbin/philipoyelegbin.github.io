@@ -19,12 +19,16 @@
   }
 
   body {
-    @apply text-slate-200;
+    @apply text-slate-200 bg-[url("assets/body-bg.jpg")] bg-repeat-y bg-cover bg-center;
     font-family: 'Montserrat', sans-serif;
   }
 
   h2 {
-    @apply text-yellow-400 text-2xl font-bold;
+    @apply text-yellow-400 text-[26px] leading-8 font-bold;
+  }
+
+  h3 {
+    @apply text-[22px] leading-8;
   }
 
   h4 {
@@ -32,7 +36,7 @@
   }
 
   p {
-    @apply text-left md:text-lg;
+    @apply text-left text-sm;
   }
 }
 

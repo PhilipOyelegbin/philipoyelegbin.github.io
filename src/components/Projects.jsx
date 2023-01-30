@@ -55,7 +55,7 @@ const Projects = () => {
   }
   
   return (
-    <section className="bg-gray-700 text-center mx-auto px-5 py-10 xl:px-10" id="projects">
+    <section className="text-center mx-auto px-5 py-10 xl:px-10" id="projects">
       <h2>MY WORKS</h2>
       <p className="lg:text-center">Here is a selection of my most recent work, <strong>click on each card to view</strong>. View my other works on <a href="https://github.com/PhilipOyelegbin" className="text-yellow-500">GitHub</a>.</p>
 

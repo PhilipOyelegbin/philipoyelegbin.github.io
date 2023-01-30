@@ -13,7 +13,12 @@ import binoculars from '../assets/binoculars.svg';
 import pencil from '../assets/pencil.svg';
 import columns from '../assets/columns.svg';
 
-export const Skills = [
+export const EducationData = [
+    {certificate: "Meta Frontend Developer", institution: "Coursera", duration: "2022 - 2023"},
+    {certificate: "HND, Industrial Maintenance Engineer", institution: "Yaba College of Technology", duration: "2019 - 2022"}
+]
+
+export const SkillsData = [
     {cover_image: figma, label: "Figma"},
     {cover_image: html, label: "HTML"},
     {cover_image: css, label: "CSS"},
@@ -25,6 +30,13 @@ export const Skills = [
     {cover_image: redux, label: "Redux"},
     {cover_image: git, label: "Git"},
     {cover_image: vs_code, label: "VS Code"},
+]
+
+export const ExperienceData = [
+    {role: "Customer Support (Intern)", company: "Whogohost Limited", duration: "2022 - till date"},
+    {role: "Frontend Engineer (Volunteer)", company: "See9ja", duration: "2022 - till date"},
+    {role: "Robotics Instructor (Contract)", company: "WiFi Combat Academy", duration: "2021 - till date"},
+    {role: "Frontend Engineer (Volunteer)", company: "Valorise Limited", duration: "2022 - 2023"},
 ]
 
 export const Services = [

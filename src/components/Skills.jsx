@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { Skills } from "./data";
+import { SkillsData } from "./data";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
@@ -58,12 +58,11 @@ const Skills = () => {
   }
 
   return (
-    <section className="bg-gray-600 text-center mx-auto px-5 py-10 xl:px-10" id="skills">
-      <h2>MY SKILLS</h2>
+    <section className="text-center mx-auto px-5 py-5 xl:px-10">
       <p className="xl:text-center">For those that know what they're checking out. I build beautiful, search engine optimized websites for businesses which ensures increased productivity and credibility plus your business gets <strong>top list in searches over 70% of the time!</strong></p>
 
       <Slider {...settings} className='w-[93%] mx-auto'>
-        {Skills?.map((skill, index) => {
+        {SkillsData?.map((skill, index) => {
           return(
             <figure className="card bg-gray-700 hover:shadow-md hover:shadow-gray-500 h-24 md:h-32" key={index}>
               <img src={skill.cover_image || ""} loading="lazy" className="w-full h-16 rounded-t-lg md:h-24" alt="tool-image" />

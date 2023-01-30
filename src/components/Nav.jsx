@@ -35,10 +35,6 @@ const Nav = () => {
             <a href="#about" className="menuLink" onClick={handleMenuContent}>ABOUT</a>
           </li>
           <li className="flex lg:flex-col mx-2 lg:mx-4">
-            <BsTools className='w-6 h-6 lg:mx-auto'/>
-            <a href="#skills" className="menuLink" onClick={handleMenuContent}>SKILLS</a>
-          </li>
-          <li className="flex lg:flex-col mx-2 lg:mx-4">
             <BsBriefcaseFill className='w-6 h-6 lg:mx-auto'/>
             <a href="#projects" className="menuLink" onClick={handleMenuContent}>PROJECTS</a>
           </li>

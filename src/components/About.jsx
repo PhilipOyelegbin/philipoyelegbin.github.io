@@ -3,13 +3,11 @@ import avatar from '../assets/profile.png'
 
 const About = () => {
   return (
-    <section id="about" className="bg-gray-700 px-5 py-10 flex flex-col-reverse xl:flex-row xl:justify-between xl:items-center gap-3 xl:px-10">
+    <section id="about" className="px-5 py-10 flex flex-col-reverse xl:flex-row xl:justify-between xl:items-center gap-3 xl:px-10">
       <div className="flex flex-col text-justify xl:w-1/2">
         <h2>ABOUT ME</h2>
 
-        <p>React Developer Philip Kehinde Oyelegbin, better known by his stage as Philip Oyelegbin, is based in Lagos, Nigeria. He is currently employed as a Robotics Instructor at WiFi Combat Academy, where he instructs kids and teenagers in a variety of technical subjects. Philip has a solid history in HVAC System Maintenance and a strong maintenance culture. He graduated from Yaba College of Technology with a degree in Industrial Maintenance Engineering.</p>
-        
-        <p>Philip is a huge fan of artificial intelligence and is incredibly enthusiastic about the tech industry. He is constantly eager to collaborate with other developers and form connections with other brilliant minds.</p>
+        <p>Frontend Engineer Philip Kehinde Oyelegbin, better known by his stage as Philip Oyelegbin, is based in Lagos, Nigeria. He is currently employed as a Customer Support Officer at WhoGoHost Limited, where he offers assistance to clients. He is a huge fan of artificial intelligence and is incredibly enthusiastic about the tech industry, constantly eager to collaborate with other developers and form connections with other brilliant minds.</p>
 
         <p className="mt-3">He is focused on providing website development solutions like:</p>
         <ul className="list-inside list-disc mt-3">
