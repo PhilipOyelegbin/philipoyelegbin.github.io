@@ -18,5 +18,8 @@
 ## The hero background image was gotten from freepik which was taken by DCStudio, find link to the image below
 - https://www.freepik.com/free-photo/portrait-artificial-intelligence-app-developer-sitting-down-typing-laptop-fixing-glasses-looking-up-smiling-camera-programer-using-portable-computer-innovating-cloud-computing_25498949.htm#query=developer&position=15&from_view=search&track=sph
 
+## The contact form background image was gotten from freepik which was taken by rawpixel.com, find link to the image below
+- https://www.freepik.com/free-photo/rear-view-businessman-talking-phone-city_17848524.htm#query=contact%20background&position=1&from_view=search&track=sph#position=1&query=contact%20background
+
 ## Live link of the portfolio can be seen via the link below
 - https://philipoyelegbin.github.io

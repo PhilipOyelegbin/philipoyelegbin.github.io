@@ -58,7 +58,7 @@ const Skills = () => {
   }
 
   return (
-    <section className="text-center mx-auto px-5 py-5 xl:px-10">
+    <section className="text-center mx-auto px-5 py-5 lg:px-20">
       <p className="xl:text-center">For those that know what they're checking out. I build beautiful, search engine optimized websites for businesses which ensures increased productivity and credibility plus your business gets <strong>top list in searches over 70% of the time!</strong></p>
 
       <Slider {...settings} className='w-[93%] mx-auto'>

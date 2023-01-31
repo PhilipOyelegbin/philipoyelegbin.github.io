@@ -55,14 +55,14 @@ const Projects = () => {
   }
   
   return (
-    <section className="text-center mx-auto px-5 py-10 xl:px-10" id="projects">
+    <section className="text-center mx-auto px-5 py-10 lg:px-20" id="projects">
       <h2>MY WORKS</h2>
-      <p className="lg:text-center">Here is a selection of my most recent work, <strong>click on each card to view</strong>. View my other works on <a href="https://github.com/PhilipOyelegbin" className="text-yellow-500">GitHub</a>.</p>
+      <p className="lg:text-center">Here is a selection of my most recent work, <strong>view my other works on <a href="https://github.com/PhilipOyelegbin" className="text-yellow-500">GitHub</a>.</strong></p>
 
       <Slider {...settings} className='w-[95%] mx-auto'>
         {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data.results && data.results?.map(project => {
           return (
-            <figure className="card bg-gray-600 hover:shadow-md hover:shadow-gray-500 h-[425px]" key={project.id}>
+            <figure className="card bg-gray-600 hover:shadow-md hover:shadow-yellow-500 h-[425px]" key={project.id}>
               <img src={project.cover_image || "Unavailable"} className="w-full rounded-t-lg h-56" alt="tool-image" />
               <figcaption className="p-3">
                 <h3 className="text-xl">{project.title || "Unavailable"}</h3>

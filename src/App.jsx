@@ -7,9 +7,9 @@ const App = () => {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
-      setInterval(() => {
-        setLoad(false);
-      }, 3000);
+    setInterval(() => {
+      setLoad(false);
+    }, 3000);
   }, []);
 
   // whatsapp chatbot

@@ -38,11 +38,11 @@ const Feedback = () => {
   };
 
   return (
-    <section className="shadow-lg flex flex-row items-center mx-auto px-5 py-10 xl:px-10" id="testimonial">
+    <section className="shadow-lg px-5 py-10 lg:px-20" id="testimonial">
       <div
-        className="lg:w-3/5 w-full bg-gradient-to-r from-yellow-700 to-yellow-400 lg:from-yellow-700 lg:via-yellow-400 lg:to-transparent rounded-lg text-white p-5">
+        className="bg-[url('https://img.freepik.com/free-photo/rear-view-businessman-talking-phone-city_53876-129657.jpg?size=626&ext=jpg&uid=R55806939&ga=GA1.1.405634466.1654584137&semt=sph')] bg-no-repeat bg-cover bg-center rounded-2xl">
         {/* container holding the contact form */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-2/5 w-full bg-yellow-500 bg-opacity-40 rounded-2xl text-white p-5">
           <h3 className="text-2xl font-extrabold mb-3">I will love to hear your feedback</h3>
           <form onSubmit={handleSend} autoComplete="false">
             <div className="form-control">
@@ -67,11 +67,6 @@ const Feedback = () => {
             <button type="submit" disabled={disabledState} className="bg-gray-700 text-slate-200 px-4 py-2 rounded-lg ease-linear duration-300 disabled:bg-gray-400">SEND</button>
           </form>
         </div>
-      </div>
-
-      {/* container holding the image which is hidden on mobile */}
-      <div className="w-full hidden lg:w-2/5 lg:flex lg:flex-row">
-        <img src="https://cdn.pixabay.com/photo/2013/07/13/13/18/man-160788__340.png" className="h-96 mx-auto" alt="contact_image"/>
       </div>
     </section>
   )

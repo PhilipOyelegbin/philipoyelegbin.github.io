@@ -3,7 +3,7 @@ import avatar from '../assets/profile.png'
 
 const About = () => {
   return (
-    <section id="about" className="px-5 py-10 flex flex-col-reverse xl:flex-row xl:justify-between xl:items-center gap-3 xl:px-10">
+    <section id="about" className="px-5 py-10 flex flex-col-reverse xl:flex-row xl:justify-between xl:items-center gap-3 lg:px-20">
       <div className="flex flex-col text-justify xl:w-1/2">
         <h2>ABOUT ME</h2>
 

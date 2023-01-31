@@ -42,7 +42,7 @@
 
 @layer components {
   .preloader {
-    @apply bg-center bg-cover bg-no-repeat w-screen h-screen bg-white z-30 top-0 left-0 fixed flex justify-center items-center transition-transform ease-in-out;
+    @apply w-screen h-screen z-30 top-0 left-0 fixed flex justify-center items-center transition-transform ease-in-out;
   }
 
   .logo {
@@ -54,7 +54,7 @@
   }
 
   .btn {
-    @apply inline-block bg-gradient-to-r from-yellow-700 to-yellow-400 ease-linear duration-300 hover:bg-gradient-to-bl hover:from-yellow-700 hover:to-yellow-400 rounded-full text-2xl text-slate-200 py-3 px-8 mt-10;
+    @apply inline-block bg-gradient-to-r from-yellow-700 to-yellow-400 ease-linear duration-300 hover:bg-gradient-to-bl hover:from-yellow-700 hover:to-yellow-400 rounded-full text-2xl text-slate-200 py-2 px-8 mt-10;
   }
 
   .card {
