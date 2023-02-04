@@ -14,7 +14,7 @@ import Testimonial from './Testimonial';
 const Body = () => {
   const [toggle, setToggle] = useState({showEducation: true, showSkill: false, showExperience: false,})
   return (
-    <>
+    <main>
       <Nav/>
       <Hero/>
       <About/>
@@ -31,7 +31,7 @@ const Body = () => {
       <Feedback/>
       <Testimonial/>
       <Footer/>
-    </>
+    </main>
   )
 }
 

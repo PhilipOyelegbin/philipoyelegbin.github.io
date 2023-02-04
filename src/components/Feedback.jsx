@@ -46,8 +46,8 @@ const Feedback = () => {
           <h3 className="text-2xl font-extrabold mb-3">I will love to hear your feedback</h3>
           <form onSubmit={handleSend} autoComplete="false">
             <div className="form-control">
-              <label htmlFor="rating" className="flex items-center gap-1">Rate my service: {user.ratings}<FaStar className="text-base text-slate-700"/></label>
-              <input type="range" name="ratings" min={0} max={5} value={user.ratings} onChange={handleChange} />
+              <label htmlFor="rating" className="flex items-center gap-1">Rate my service: {user.ratings}<FaStar className="text-base text-yellow-500"/></label>
+              <input type="range" name="ratings"  min={0} max={5} value={user.ratings} onChange={handleChange} />
             </div>
             <div className="form-control">
               <label htmlFor="full_name">Full name:</label>

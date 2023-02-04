@@ -4,11 +4,11 @@ import Loader from './components/Loader';
 import 'animate.css';
 
 const App = () => {
-  const [load, setLoad] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setInterval(() => {
-      setLoad(false);
+      setLoading(false);
     }, 3000);
   }, []);
 
@@ -35,9 +35,7 @@ const App = () => {
 
   return (
     <>
-      {
-        load === true ? <Loader /> : <Body/>
-      }
+      {loading ? <Loader /> : <Body/>}
     </>
   )
 }
