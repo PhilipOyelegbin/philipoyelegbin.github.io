@@ -2,7 +2,7 @@ import { getData } from "../hooks/useFetch";
 
 const Testimonial = () => {
     const {loading, error, data} = getData("https://portfolio-api.up.railway.app/philip-reviews");
-    
+
   return (
     <section className="px-5 py-10 lg:px-20">
         <h2 className="text-center">TESTIMONIAL</h2>

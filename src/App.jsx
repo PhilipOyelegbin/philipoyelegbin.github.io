@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 import Body from './components/Body';
 import Loader from './components/Loader';
+import 'react-toastify/dist/ReactToastify.css';
 import 'animate.css';
 
 const App = () => {
@@ -36,6 +38,7 @@ const App = () => {
   return (
     <>
       {loading ? <Loader /> : <Body/>}
+      <ToastContainer position='top-right' autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     </>
   )
 }

@@ -19,9 +19,9 @@ const Body = () => {
       <Hero/>
       <About/>
       <div className="flex justify-center text-gray-800 gap-3 py-4">
-        <p className='bg-slate-300 px-3 py-2 rounded-lg hover:shadow-md hover:shadow-gray-500 ' onClick={()=> setToggle({showEducation: true, showSkill: false, showExperience: false})}>Education</p>
-        <p className='bg-slate-300 px-3 py-2 rounded-lg hover:shadow-md hover:shadow-gray-500 ' onClick={()=> setToggle({showEducation: false, showSkill: true, showExperience: false})}>Skills</p>
-        <p className='bg-slate-300 px-3 py-2 rounded-lg hover:shadow-md hover:shadow-gray-500 ' onClick={()=> setToggle({showEducation: false, showSkill: false, showExperience: true})}>Experience</p>
+        <p role="tab" className='bg-slate-300 px-3 py-2 rounded-lg hover:bg-yellow-500 hover:text-slate-200' onClick={()=> setToggle({showEducation: true, showSkill: false, showExperience: false})}>Education</p>
+        <p role="tab" className='bg-slate-300 px-3 py-2 rounded-lg hover:bg-yellow-500 hover:text-slate-200' onClick={()=> setToggle({showEducation: false, showSkill: true, showExperience: false})}>Skills</p>
+        <p role="tab" className='bg-slate-300 px-3 py-2 rounded-lg hover:bg-yellow-500 hover:text-slate-200' onClick={()=> setToggle({showEducation: false, showSkill: false, showExperience: true})}>Experience</p>
       </div>
       {toggle.showEducation && <Education/>}
       {toggle.showSkill && <Skills/>}
