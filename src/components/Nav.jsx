@@ -5,11 +5,13 @@ import { FaTimes } from 'react-icons/fa';
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
-  
+
   const handleMenuContent = () => {
     setOpen(!open)
   };
-  
+
+  open ? document.getElementById("root").classList.add("fixed") : document.getElementById("root").classList.remove("fixed")
+
   return (
     <header className="shadow-lg bg-black lg:bg-opacity-60 px-5 py-2 flex justify-between items-center fixed top-0 w-screen z-30 lg:px-20">
       {/* menu button */}
