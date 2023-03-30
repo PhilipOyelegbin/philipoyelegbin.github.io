@@ -9,6 +9,7 @@ import react from "/src/assets/react.png";
 import redux from "/src/assets/redux.png";
 import git from "/src/assets/git.png";
 import vs_code from "/src/assets/vs-code.jpg";
+import vim from "/src/assets/vim.png";
 import binoculars from '../assets/binoculars.svg';
 import pencil from '../assets/pencil.svg';
 import columns from '../assets/columns.svg';
@@ -30,10 +31,11 @@ export const SkillsData = [
     {cover_image: redux, label: "Redux"},
     {cover_image: git, label: "Git"},
     {cover_image: vs_code, label: "VS Code"},
+	{cover_image: vim, label: "Vim"}
 ]
 
 export const ExperienceData = [
-    {role: "Customer Support (Intern)", company: "Whogohost Limited", duration: "2022 - till date"},
+    {role: "Customer Support Representative", company: "Whogohost Limited", duration: "2022 - till date"},
     {role: "Frontend Engineer (Volunteer)", company: "See9ja", duration: "2022 - till date"},
     {role: "Robotics Instructor (Contract)", company: "WiFi Combat Academy", duration: "2021 - till date"},
     {role: "Frontend Engineer (Volunteer)", company: "Valorise Limited", duration: "2022 - 2023"},

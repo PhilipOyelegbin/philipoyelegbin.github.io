@@ -41,6 +41,10 @@
 }
 
 @layer components {
+  #root {
+    @apply lg:relative;
+  }
+
   .preloader {
     @apply w-screen h-screen flex justify-center items-center transition-transform ease-in-out duration-300;
   }
