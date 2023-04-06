@@ -1,15 +1,15 @@
 const express = require('express');
 // const morgan = require('morgan');
 const mongoose = require('mongoose');
-const projectRoute = require('./views/projectRoutes')
-const feedbackRoute = require('./views/feedbackRoutes')
+const projectRoute = require('./views/projectRoutes');
+const feedbackRoute = require('./views/feedbackRoutes');
+require('dotenv').config();
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT;
 
 // connect to mongodb
-const dbURI = "mongodb+srv://philipoyelegbin:Bayowa,96@expressdb.0io21lm.mongodb.net/portfolio?retryWrites=true&w=majority";
-mongoose.connect(dbURI)
+mongoose.connect(process.env.DB_URL)
     .then(resp => {
         console.log("Database connected")
         app.listen(port, () => console.log("Server has started on port", port));
@@ -22,6 +22,7 @@ app.set('view engine', 'ejs')
 // middleware
 app.use(express.static('public'))
 app.use(express.json())
+app.use(express.urlencoded({extended: false}))
 // app.use(morgan('dev'))
 
 // page route
