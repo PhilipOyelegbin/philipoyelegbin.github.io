@@ -6,9 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { getData } from "../hooks/useFetch";
 
 const Projects = () => {
-  // const {data, error, loading} = getData("https://portfolio-api.up.railway.app/philip-projects");
-  const {data, error, loading} = getData("https://sheets.googleapis.com/v4/spreadsheets/1soVX8r4S0AEkqkiKmm_1aK0xBoXS73gBf87vYfU1Sz8/values/A:F");
-  console.log(data)
+  const {data, error, loading} = getData(import.meta.env.VITE_PROJECT_URL);
 
   const settings = {
     dots: true,
@@ -62,7 +60,7 @@ const Projects = () => {
       <p className="lg:text-center">Here is a selection of my most recent work, <strong>view my other works on <a href="https://github.com/PhilipOyelegbin" className="text-yellow-500">GitHub</a>.</strong></p>
 
       <Slider {...settings} className='w-[95%] mx-auto'>
-        {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data.results && data.results?.map(project => {
+        {loading ? (<h3 className="text-2xl text-center">Loading...</h3>) : error ? (<h3 className="text-2xl text-center">Unable to fetch data</h3>) : data && data?.map(project => {
           return (
             <figure className="card bg-gray-600 hover:shadow-md hover:shadow-yellow-500 h-[425px]" key={project._id}>
               <img src={project.cover_image || "Unavailable"} className="w-full rounded-t-lg h-56" alt="tool-image" />

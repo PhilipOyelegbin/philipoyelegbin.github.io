@@ -19,7 +19,7 @@ const Feedback = () => {
     let userRating = {
       full_name: user.full_name, email: user.email, comment: user.comment, rating: user.rating
     }
-    axios.post("https://portfolio-api.up.railway.app/philip-reviews",userRating)
+    axios.post(import.meta.env.VITE_FEEDBACK_URL,userRating)
     .then(() => {
       toast.success("Feedback sent!")
       setUser({full_name: "", email: "", comment: "", rating: 5})
