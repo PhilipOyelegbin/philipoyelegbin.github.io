@@ -1,0 +1,53 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    scroll-behavior: smooth;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+main {
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 500;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 22px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 20px 80px;
+    }
+
+    main {
+        padding: 0 80px;
+    }
+
+    footer {
+        padding: 20px 80px;
+    }
+}

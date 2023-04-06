@@ -1,0 +1,19 @@
+{
+  "name": "portfolio_backend",
+  "version": "1.0.0",
+  "description": "This is the backend to my portfolio project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "test app.js"
+  },
+  "author": "Philip Oyelegbin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0"
+  }
+}
