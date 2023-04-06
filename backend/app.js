@@ -1,5 +1,4 @@
 const express = require('express');
-// const morgan = require('morgan');
 const mongoose = require('mongoose');
 const projectRoute = require('./routes/projectRoutes');
 const feedbackRoute = require('./routes/feedbackRoutes');
@@ -22,8 +21,8 @@ app.set('view engine', 'ejs')
 // middleware
 app.use(express.static('public'))
 app.use(express.json())
+app.use(cors())
 app.use(express.urlencoded({extended: false}))
-// app.use(morgan('dev'))
 
 // page route
 app.get("/", (req, res) => {
