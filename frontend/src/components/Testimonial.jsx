@@ -1,7 +1,7 @@
 import { getData } from "../hooks/useFetch";
 
 const Testimonial = () => {
-    const {loading, error, data} = getData(import.meta.env.VITE_FEEDBACK_URL);
+    const {loading, error, data} = getData(process.env.REACT_APP_FEEDBACK_URL);
 
   return (
     <section className="px-5 py-10 lg:px-20">

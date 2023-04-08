@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { getData } from "../hooks/useFetch";
 
 const Projects = () => {
-  const {data, error, loading} = getData(import.meta.env.VITE_PROJECT_URL);
+  const {data, error, loading} = getData(process.env.REACT_APP_PROJECT_URL);
 
   const settings = {
     dots: true,
