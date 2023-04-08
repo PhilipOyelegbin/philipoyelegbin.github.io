@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"
@@ -21,8 +21,7 @@
     "react-slick": "^0.29.0",
     "react-toastify": "^9.1.1",
     "slick-carousel": "^1.8.1",
-    "swr": "^2.0.0",
-    "use-sync-external-store": "^1.2.0"
+    "swr": "^2.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

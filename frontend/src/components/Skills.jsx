@@ -1,9 +1,36 @@
 import Slider from "react-slick";
-import { SkillsData } from "./data";
-import "slick-carousel/slick/slick.css"; 
+// import { SkillsData } from "./data";
+import figma from '/src/assets/figma.png';
+import html from "/src/assets/html.png";
+import css from "/src/assets/css.png";
+import sass from "/src/assets/sass.png";
+import bootstrap from "/src/assets/bootstrap.jpg";
+import tailwind from "/src/assets/tailwind.png";
+import javascript from "/src/assets/javascript.png";
+import react from "/src/assets/react.png";
+import redux from "/src/assets/redux.png";
+import git from "/src/assets/git.png";
+import vs_code from "/src/assets/vs-code.jpg";
+import vim from "/src/assets/vim.png";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Skills = () => {
+  const SkillsData = [
+    {cover_image: figma, label: "Figma"},
+    {cover_image: html, label: "HTML"},
+    {cover_image: css, label: "CSS"},
+    {cover_image: sass, label: "Sass"},
+    {cover_image: bootstrap, label: "Bootsrap"},
+    {cover_image: tailwind, label: "Tailwind"},
+    {cover_image: javascript, label: "JavaScript"},
+    {cover_image: react, label: "React"},
+    {cover_image: redux, label: "Redux"},
+    {cover_image: git, label: "Git"},
+    {cover_image: vs_code, label: "VS Code"},
+    {cover_image: vim, label: "Vim"}
+  ]
+
   const settings = {
     dots: true,
     infinite: true,
