@@ -20,14 +20,13 @@ mongoose.connect(process.env.DB_URL)
 app.set('view engine', 'ejs')
 
 // middleware
-app.use(express.static('public'))
 app.use(express.json())
 app.use(cors())
 app.use(express.urlencoded({extended: false}))
 
 // page route
 app.get("/", (req, res) => {
-    res.render('index', {title: "Home"})
+    res.render('index', {year: new Date().getFullYear()})
 })
 
 // blogs
@@ -36,5 +35,5 @@ app.use('/feedbacks', feedbackRoute)
 
 // error route
 app.use((req, res) => {
-    res.status(404).render('error', {title: "404"})
+    res.status(404).render('error', {year: new Date().getFullYear()})
 })
