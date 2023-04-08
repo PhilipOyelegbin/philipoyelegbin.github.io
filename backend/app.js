@@ -16,9 +16,6 @@ mongoose.connect(process.env.DB_URL)
     })
     .catch(err => console.log(err))
 
-// register view engine
-app.set('view engine', 'ejs')
-
 // middleware
 app.use(express.json())
 app.use(cors())
@@ -26,7 +23,7 @@ app.use(express.urlencoded({extended: false}))
 
 // page route
 app.get("/", (req, res) => {
-    res.render('index', {year: new Date().getFullYear()})
+    res.send("My Portfolio API built using express, routes are: -/projects -/feedbacks")
 })
 
 // blogs
@@ -35,5 +32,5 @@ app.use('/feedbacks', feedbackRoute)
 
 // error route
 app.use((req, res) => {
-    res.status(404).render('error', {year: new Date().getFullYear()})
+    res.status(404).send("404, route not found")
 })
