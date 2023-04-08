@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const projectRoute = require('./routes/projectRoutes');
-const feedbackRoute = require('./routes/feedbackRoutes');
+const projectRoute = require('./src/routes/projectRoutes');
+const feedbackRoute = require('./src/routes/feedbackRoutes');
 require('dotenv').config();
 
 const app = express();
