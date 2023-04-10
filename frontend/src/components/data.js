@@ -7,6 +7,7 @@ import tailwind from "../assets/tailwind.png";
 import javascript from "../assets/javascript.png";
 import react from "../assets/react.png";
 import redux from "../assets/redux.png";
+import express from "../assets/express.png";
 import git from "../assets/git.png";
 import vs_code from "../assets/vs-code.jpg";
 import vim from "../assets/vim.png";
@@ -29,15 +30,16 @@ export const SkillsData = [
     {cover_image: javascript, label: "JavaScript"},
     {cover_image: react, label: "React"},
     {cover_image: redux, label: "Redux"},
+	{cover_image: express, label: "Express"},
     {cover_image: git, label: "Git"},
     {cover_image: vs_code, label: "VS Code"},
-	{cover_image: vim, label: "Vim"}
+	{cover_image: vim, label: "Vim"},
 ]
 
 export const ExperienceData = [
     {role: "Customer Support Representative", company: "Whogohost Limited", duration: "2022 - till date"},
     {role: "Frontend Engineer (Volunteer)", company: "See9ja", duration: "2022 - till date"},
-    {role: "Robotics Instructor (Contract)", company: "WiFi Combat Academy", duration: "2021 - till date"},
+    {role: "Robotics Instructor (Contract)", company: "WiFi Combat Academy", duration: "2021 - 2023"},
     {role: "Frontend Engineer (Volunteer)", company: "Valorise Limited", duration: "2022 - 2023"},
 ]
 
