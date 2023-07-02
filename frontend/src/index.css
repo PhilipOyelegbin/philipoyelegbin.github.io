@@ -59,7 +59,7 @@
   }
 
   .card {
-    @apply w-[300px] h-fit ease-linear duration-300 hover:box-border hover:shadow-md outline-none hover:shadow-yellow-400 overflow-hidden mt-1 rounded-2xl;
+    @apply w-fit h-fit ease-linear duration-300 hover:box-border hover:shadow-md outline-none hover:shadow-yellow-400 overflow-hidden mt-1 rounded-2xl;
   }
 
   .form-control {

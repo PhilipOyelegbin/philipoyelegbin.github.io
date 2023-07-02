@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { BsHouseDoorFill, BsPersonCircle, BsTools, BsBriefcaseFill, BsCartFill, BsFillChatDotsFill } from 'react-icons/bs';
+import { BsHouseDoorFill, BsPersonCircle, BsBriefcaseFill, BsCartFill, BsFillChatDotsFill } from 'react-icons/bs';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
 

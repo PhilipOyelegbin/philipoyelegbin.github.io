@@ -39,8 +39,8 @@ export const SkillsData = [
 export const ExperienceData = [
     {role: "Customer Support Representative", company: "Whogohost Limited", duration: "2022 - till date"},
     {role: "Frontend Engineer (Volunteer)", company: "See9ja", duration: "2022 - till date"},
-    {role: "Robotics Instructor (Contract)", company: "WiFi Combat Academy", duration: "2021 - 2023"},
     {role: "Frontend Engineer (Volunteer)", company: "Valorise Limited", duration: "2022 - 2023"},
+    {role: "Robotics Instructor (Contract)", company: "WiFi Combat Academy", duration: "2021 - 2023"},
 ]
 
 export const Services = [

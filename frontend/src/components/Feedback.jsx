@@ -48,17 +48,17 @@ const Feedback = () => {
             <div className="form-control">
               <label htmlFor="full_name">Full name:</label>
               <input id="full_name" type="text" name="full_name" value={user.full_name} onChange={handleChange} minLength="4" maxLength="50" placeholder="Enter your full name" required/>
-              {(user.full_name == "" || user.full_name.length < 4) && <p className="flex items-center text-red-500 text-xs"><FaExclamation/> {errorMessage.full_name}</p>}
+              {(user.full_name === "" || user.full_name.length < 4) && <p className="flex items-center text-red-500 text-xs"><FaExclamation/> {errorMessage.full_name}</p>}
             </div>
             <div className="form-control">
               <label htmlFor="email">Email:</label>
               <input id="email" type="email" name="email" value={user.email} onChange={handleChange} placeholder="Enter your email" required/>
-              {(user.email == "" || !user.email.includes("@")) && <p className="flex items-center text-red-500 text-xs"><FaExclamation/> {errorMessage.email}</p>}
+              {(user.email === "" || !user.email.includes("@")) && <p className="flex items-center text-red-500 text-xs"><FaExclamation/> {errorMessage.email}</p>}
             </div>
             <div className="form-control">
               <label htmlFor="comment">Comment:</label>
               <textarea id="comment" name="comment" cols="30" rows="5" value={user.comment} onChange={handleChange} minLength="50" maxLength="150" placeholder="Write your message here..." required></textarea>
-              {(user.comment == "" || user.comment.length < 50) && <p className="flex items-center text-red-500 text-xs"><FaExclamation/> {errorMessage.comment}</p>}
+              {(user.comment === "" || user.comment.length < 50) && <p className="flex items-center text-red-500 text-xs"><FaExclamation/> {errorMessage.comment}</p>}
             </div>
 
             <button type="submit" disabled={disabledState} className="bg-gray-700 text-slate-200 px-4 py-2 rounded-lg ease-linear duration-300 disabled:bg-gray-400">SEND</button>
