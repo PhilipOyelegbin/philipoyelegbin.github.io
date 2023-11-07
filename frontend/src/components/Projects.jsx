@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { FaInternetExplorer, FaGithub, FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
@@ -62,16 +61,14 @@ const Projects = () => {
       <Slider {...settings}>
         {data && data?.map(project => {
           return (
-            <figure className="card bg-gray-600 hover:shadow-md hover:shadow-yellow-500 h-[425px]" key={project._id}>
-              <img src={project.cover_image || "Unavailable"} className="w-full rounded-t-lg h-56" alt="tool-image" />
+            <figure className="card bg-gray-600 hover:shadow-md hover:shadow-yellow-500 h-[490px]" key={project._id}>
+              <img src={project.cover_image || "Unavailable"} className="w-full rounded-t-lg h-56" alt="project background" />
               <figcaption className="p-3">
                 <h3 className="text-xl">{project.title || "Unavailable"}</h3>
                 <p className="text-sm">{project.description || "Unavailable"}</p>
                 <div className="flex gap-5 items-center text-2xl mt-3">
                   <a href={project.project_url} className="hover:text-yellow-500" target="_blank" rel="noopener noreferrer"><FaInternetExplorer/></a>
                   <a href={project.github_url} className="hover:text-yellow-500" target="_blank" rel="noopener noreferrer"><FaGithub/></a>
-                  {/* <Link to={project.project_url}><FaInternetExplorer/></Link>
-                  <Link to={project.github_url}><FaGithub/></Link> */}
                 </div>
               </figcaption>
             </figure>

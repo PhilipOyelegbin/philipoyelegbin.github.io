@@ -64,7 +64,7 @@ const Skills = () => {
         {SkillsData?.map((skill, index) => {
           return(
             <figure className="card bg-gray-700 hover:shadow-md hover:shadow-gray-500 h-24 md:h-32" key={index}>
-              <img src={skill.cover_image || ""} loading="lazy" className="w-full h-16 rounded-t-lg md:h-24" alt="tool-image" />
+              <img src={skill.cover_image || ""} loading="lazy" className="w-full h-16 rounded-t-lg md:h-24" alt="tool icon" />
               <figcaption>
                 <h3 className="text-sm text-center my-2">{skill.label || ""}</h3>
               </figcaption>
