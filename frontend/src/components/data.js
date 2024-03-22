@@ -30,14 +30,17 @@ export const SkillsData = [
     {cover_image: javascript, label: "JavaScript"},
     {cover_image: react, label: "React"},
     {cover_image: redux, label: "Redux"},
-	{cover_image: express, label: "Express"},
+    {cover_image: express, label: "Express"},
     {cover_image: git, label: "Git"},
     {cover_image: vs_code, label: "VS Code"},
-	{cover_image: vim, label: "Vim"},
+    {cover_image: vim, label: "Vim"},
+    {cover_image: "https://www.gend.co/hs-fs/hubfs/gcp-logo-cloud.png?width=730&name=gcp-logo-cloud.png", label: "GCP"},
+    {cover_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM-FLAWWfGq2LXzkQUQcEkpfFvRiaySiSn3A&usqp=CAU", label: "Ansible"},
+    {cover_image: "https://static-00.iconduck.com/assets.00/terraform-icon-1803x2048-hodrzd3t.png", label: "Terraform"},
 ]
 
 export const ExperienceData = [
-    {role: "Customer Support Representative", company: "Whogohost Limited", duration: "2022 - till date"},
+    {role: "Customer Support Officer", company: "GO54 (Whogohost Limited)", duration: "2022 - till date"},
     {role: "Frontend Engineer (Volunteer)", company: "See9ja", duration: "2022 - till date"},
     {role: "Frontend Engineer (Volunteer)", company: "Valorise Limited", duration: "2022 - 2023"},
     {role: "Robotics Instructor (Contract)", company: "WiFi Combat Academy", duration: "2021 - 2023"},
