@@ -7,7 +7,7 @@ const About = () => {
       <div className="flex flex-col text-justify xl:w-1/2">
         <h2>ABOUT ME</h2>
 
-        <p>Frontend Engineer Philip Kehinde Oyelegbin, better known by his stage as Philip Oyelegbin, is based in Lagos, Nigeria. He is currently employed as a Customer Support Officer at WhoGoHost Limited, where he offers assistance to clients. He is a huge fan of artificial intelligence and is incredibly enthusiastic about the tech industry, constantly eager to collaborate with other developers and form connections with other brilliant minds.</p>
+        <p>I'm a **Support Specialist**, **Frontend Developer**, and **Cloud Engineer** with a background in customer support and front-end development. I have proven skills in **customer service**, **technical support**, **JavaScript**, **HTML5**, **CSS**, **React.js**, **cloud services**, and **Infrastructure as Code (IaC)**. I'm experienced with **Google Cloud Platform (GCP)**, **Terraform**, and **Ansible**. I've served as a Robotics Instructor, demonstrating leadership and commitment to STEM education. I'm adaptable, collaborative, innovative, and eager to contribute to a dynamic team.</p>
 
         <p className="mt-3">He is focused on providing website development solutions like:</p>
         <ul className="list-inside list-disc mt-3">
