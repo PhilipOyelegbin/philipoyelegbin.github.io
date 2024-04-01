@@ -7,7 +7,7 @@ const Service = () => {
       <p className='lg:text-center'>Web design for businesses! From conception to product UI/UX and developing web pages, I've got you covered. <strong>Here's how it works</strong></p>
 
       {/* grid view of the services in a container */}
-      <div className="grid grid-flow-row grid-cols-1 gap-5 mt-5 lg:grid-cols-3 aspect-auto">
+      <div className="grid grid-flow-row grid-cols-1 gap-5 mt-5 lg:grid-cols-3">
         {Services?.map(service => {
           return (
             <figure className="card bg-gray-700 lg:h-full" key={service.id}>
