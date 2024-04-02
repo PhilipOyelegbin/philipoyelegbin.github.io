@@ -7,7 +7,7 @@ const About = () => {
       <div className="flex flex-col text-justify xl:w-1/2">
         <h2>ABOUT ME</h2>
 
-        <p>I'm a <strong>Support Specialist, Frontend Developer</strong>, and <strong>Cloud Engineer</strong> with a background in customer support and front-end development. I have proven skills in <strong>customer service, technical support, JavaScript, HTML5, CSS, React.js, cloud services</strong>, and <strong>Infrastructure as Code (IaC)</strong>. I'm experienced with <strong>Google Cloud Platform (GCP), Terraform</strong>, and <strong>Ansible</strong></p>.
+        <p>I'm a <strong>Support Specialist, Frontend Developer</strong>, and <strong>Cloud Engineer</strong> with a background in customer support and front-end development. I have proven skills in <strong>customer service, technical support, JavaScript, HTML5, CSS, React.js, cloud services</strong>, and <strong>Infrastructure as Code (IaC)</strong>. I'm experienced with <strong>Google Cloud Platform (GCP), Terraform</strong>, and <strong>Ansible</strong>.</p>
         
         <p className="mt-3">I've served as a Robotics Instructor, demonstrating leadership and commitment to STEM education. I'm adaptable, collaborative, innovative, and eager to contribute to a dynamic team. I'm focused on providing website development solutions like:</p>
         <ul className="list-inside list-disc mt-3">
