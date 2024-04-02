@@ -11,9 +11,9 @@ function App() {
   // whatsapp chatbot
   // (function () {
   //   var options = {
-  //     whatsapp: "+2348078828296", // WhatsApp number
+  //     whatsapp: "+2348054945601", // WhatsApp number
   //     call_to_action: "Hire me", // Call to action
-  //     position: "right", // Position may be 'right' or 'left'
+  //     position: "right",
   //   };
   //   var proto = document.location.protocol,
   //     host = "getbutton.io",

@@ -4,7 +4,7 @@ import css from "../assets/css.png";
 import sass from "../assets/sass.png";
 import bootstrap from "../assets/bootstrap.jpg";
 import tailwind from "../assets/tailwind.png";
-import javascript from "../assets/javascript.png";
+import javascript from "../assets/js.png";
 import react from "../assets/react.png";
 import redux from "../assets/redux.png";
 import express from "../assets/express.png";
@@ -41,7 +41,7 @@ export const SkillsData = [
 
 export const ExperienceData = [
     {role: "Customer Support Officer", company: "GO54 (Whogohost Limited)", duration: "2022 - till date"},
-    {role: "Frontend Engineer (Volunteer)", company: "See9ja", duration: "2022 - till date"},
+    {role: "Frontend Engineer (Volunteer)", company: "See9ja", duration: "2022 - 2024"},
     {role: "Frontend Engineer (Volunteer)", company: "Valorise Limited", duration: "2022 - 2023"},
     {role: "Robotics Instructor (Contract)", company: "WiFi Combat Academy", duration: "2021 - 2023"},
 ]

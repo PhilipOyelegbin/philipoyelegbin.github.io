@@ -1,21 +1,21 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "My Portfolio",
+  "name": "Philip Oyelegbin Portfolio",
   "icons": [
     {
-      "src": "favicon-512x512.png",
+      "src": "favicon-312x312.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
     },
     {
-      "src": "favicon-512x512.png",
+      "src": "favicon-312x312.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "favicon-512x512.png",
+      "src": "favicon-312x312.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "312x312"
     }
   ],
   "start_url": ".",
