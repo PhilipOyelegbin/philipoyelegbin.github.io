@@ -1,43 +1,72 @@
 import figma from '../assets/figma.png';
-import html from "../assets/html.png";
-import css from "../assets/css.png";
+import html from "../assets/html5.png";
+import css from "../assets/css3.png";
 import sass from "../assets/sass.png";
-import bootstrap from "../assets/bootstrap.jpg";
+import bootstrap from "../assets/bootstrap.png";
 import tailwind from "../assets/tailwind.png";
-import javascript from "../assets/js.png";
-import react from "../assets/react.png";
-import redux from "../assets/redux.png";
+import javascript from "../assets/javascript.png";
+import react from "../assets/react.svg";
+import redux from "../assets/redux.svg";
+import nodejs from "../assets/nodejs.svg";
 import express from "../assets/express.png";
+import mysql from "../assets/mysql.svg";
+import mongodb from "../assets/mongodb.svg";
+import postgresql from "../assets/postgresql.png";
 import git from "../assets/git.png";
-import vs_code from "../assets/vs-code.jpg";
+import github from "../assets/github.png";
+import vscode from "../assets/vscode.png";
 import vim from "../assets/vim.png";
+import gcp from "../assets/gcp.png";
+import terraform from "../assets/terraform.png";
+import docker from "../assets/docker.svg";
+import kubernetes from "../assets/kubernetes.png";
+import nginx from "../assets/nginx.png";
+import netlify from "../assets/netlify.png";
 import binoculars from '../assets/binoculars.svg';
 import pencil from '../assets/pencil.svg';
 import columns from '../assets/columns.svg';
 
 export const EducationData = [
+    {certificate: "Cloud Engineer", institution: "3MTT AltSchool", duration: "2023 - 2024"},
     {certificate: "Meta Frontend Developer", institution: "Coursera", duration: "2022 - 2023"},
     {certificate: "HND, Industrial Maintenance Engineer", institution: "Yaba College of Technology", duration: "2019 - 2022"}
 ]
 
-export const SkillsData = [
-    {cover_image: figma, label: "Figma"},
-    {cover_image: html, label: "HTML"},
-    {cover_image: css, label: "CSS"},
-    {cover_image: sass, label: "Sass"},
-    {cover_image: bootstrap, label: "Bootsrap"},
-    {cover_image: tailwind, label: "Tailwind"},
-    {cover_image: javascript, label: "JavaScript"},
-    {cover_image: react, label: "React"},
-    {cover_image: redux, label: "Redux"},
-    {cover_image: express, label: "Express"},
-    {cover_image: git, label: "Git"},
-    {cover_image: vs_code, label: "VS Code"},
-    {cover_image: vim, label: "Vim"},
-    {cover_image: "https://www.gend.co/hs-fs/hubfs/gcp-logo-cloud.png?width=730&name=gcp-logo-cloud.png", label: "GCP"},
-    {cover_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM-FLAWWfGq2LXzkQUQcEkpfFvRiaySiSn3A&usqp=CAU", label: "Ansible"},
-    {cover_image: "https://static-00.iconduck.com/assets.00/terraform-icon-1803x2048-hodrzd3t.png", label: "Terraform"},
-]
+export const SkillsData = {
+    FrontendSkills: [
+        {cover_image: html, label: "HTML"},
+        {cover_image: css, label: "CSS"},
+        {cover_image: sass, label: "Sass"},
+        {cover_image: bootstrap, label: "Bootsrap"},
+        {cover_image: tailwind, label: "Tailwind"},
+        {cover_image: javascript, label: "JavaScript"},
+        {cover_image: react, label: "React"},
+        {cover_image: redux, label: "Redux"},
+    ],
+    BackendSkills: [
+        {cover_image: nodejs, label: "Nodejs"},
+        {cover_image: express, label: "Express"},
+        {cover_image: mongodb, label: "MongoDB"},
+        {cover_image: mysql, label: "MySQL"},
+        {cover_image: postgresql, label: "PostgreSQL"},
+    ],
+    CloudSkills: [
+        {cover_image: gcp, label: "GCP"},
+        {cover_image: nginx, label: "Nginx"},
+        {cover_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM-FLAWWfGq2LXzkQUQcEkpfFvRiaySiSn3A&usqp=CAU", label: "Ansible"},
+        {cover_image: terraform, label: "Terraform"},
+        {cover_image: docker, label: "Docker"},
+        {cover_image: kubernetes, label: "Kubernetes"},
+    ],
+    OtherSkills: [
+        {cover_image: figma, label: "Figma"},
+        {cover_image: vscode, label: "VS Code"},
+        {cover_image: git, label: "Git"},
+        {cover_image: github, label: "GitHub"},
+        {cover_image: vim, label: "Vim"},
+        {cover_image: netlify, label: "Netlify"},
+    ]
+}
 
 export const ExperienceData = [
     {role: "Customer Support Officer", company: "GO54 (Whogohost Limited)", duration: "2022 - till date"},

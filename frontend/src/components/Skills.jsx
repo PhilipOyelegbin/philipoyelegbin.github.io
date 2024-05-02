@@ -1,79 +1,71 @@
-import Slider from "react-slick";
-import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import { SkillsData } from "./data";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Skills = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    speed: 500,
-    cssEase: "linear",
-    nextArrow: <NextArrow/>,
-    prevArrow: <PrevArrow/>,
-    initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1050,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 675,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 375,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
+  return <section className="skill-container">
+    <div>
+      <h4>Frontend</h4>
+      <div className="flex flex-wrap items-center justify-center gap-3 mt-5">
+        {SkillsData.FrontendSkills?.map((skill, index) => {
+            return(
+              <figure className="flex items-center gap-3 py-1 px-3 rounded-xl border border-gray-100 hover:shadow-md hover:shadow-gray-500" key={index}>
+                <img src={skill.cover_image || ""} loading="lazy" className="w-6 h-6" alt="tool icon" />
+                <figcaption>
+                  <h3 className="text-sm text-center my-2">{skill.label || ""}</h3>
+                </figcaption>
+              </figure>
+            )
+          })}
+      </div>
+    </div>
 
-  // function to control the slide to the next slide
-  function NextArrow({onClick}) {
-    return (
-      <FaChevronCircleRight className="text-3xl text-yellow-500 absolute top-1/2 right-0 cursor-pointer -translate-y-1/2 z-10 hover:text-yellow-700" onClick={onClick} />
-    );
-  }
+    <div>
+      <h4>Backend</h4>
+      <div className="flex flex-wrap items-center justify-center gap-3 mt-5">
+        {SkillsData.BackendSkills?.map((skill, index) => {
+            return(
+              <figure className="flex items-center gap-3 py-1 px-3 rounded-xl border border-gray-100 hover:shadow-md hover:shadow-gray-500" key={index}>
+                <img src={skill.cover_image || ""} loading="lazy" className="w-6 h-6" alt="tool icon" />
+                <figcaption>
+                  <h3 className="text-sm text-center my-2">{skill.label || ""}</h3>
+                </figcaption>
+              </figure>
+            )
+          })}
+      </div>
+    </div>
 
-  // function to control the slide to the previous slide
-  function PrevArrow({onClick}) {
-    return (
-      <FaChevronCircleLeft className="text-3xl text-yellow-500 absolute top-1/2 left-0 cursor-pointer -translate-y-1/2 z-10 hover:text-yellow-700" onClick={onClick} />
-    );
-  }
+    <div>
+      <h4>Cloud</h4>
+      <div className="flex flex-wrap items-center justify-center gap-3 mt-5">
+        {SkillsData.CloudSkills?.map((skill, index) => {
+            return(
+              <figure className="flex items-center gap-3 py-1 px-3 rounded-xl border border-gray-100 hover:shadow-md hover:shadow-gray-500" key={index}>
+                <img src={skill.cover_image || ""} loading="lazy" className="w-6 h-6" alt="tool icon" />
+                <figcaption>
+                  <h3 className="text-sm text-center my-2">{skill.label || ""}</h3>
+                </figcaption>
+              </figure>
+            )
+          })}
+      </div>
+    </div>
 
-  return (
-    <section className="text-center mx-auto px-5 py-5 lg:px-20">
-      <p className="xl:text-center">For those that know what they're checking out. I build beautiful, search engine optimized websites for businesses which ensures increased productivity and credibility plus your business gets <strong>top list in searches over 70% of the time!</strong></p>
-
-      <Slider {...settings}>
-        {SkillsData?.map((skill, index) => {
-          return(
-            <figure className="card bg-gray-700 hover:shadow-md hover:shadow-gray-500 h-24 md:h-32" key={index}>
-              <img src={skill.cover_image || ""} loading="lazy" className="w-full h-16 rounded-t-lg md:h-24" alt="tool icon" />
-              <figcaption>
-                <h3 className="text-sm text-center my-2">{skill.label || ""}</h3>
-              </figcaption>
-            </figure>
-          )
-        })}
-      </Slider>
-    </section>
-  )
+    <div>
+      <h4>Others</h4>
+      <div className="flex flex-wrap items-center justify-center gap-3 mt-5">
+        {SkillsData.OtherSkills?.map((skill, index) => {
+            return(
+              <figure className="flex items-center gap-3 py-1 px-3 rounded-xl border border-gray-100 hover:shadow-md hover:shadow-gray-500" key={index}>
+                <img src={skill.cover_image || ""} loading="lazy" className="w-6 h-6" alt="tool icon" />
+                <figcaption>
+                  <h3 className="text-sm text-center my-2">{skill.label || ""}</h3>
+                </figcaption>
+              </figure>
+            )
+          })}
+      </div>
+    </div>
+  </section>
 }
 
 export default Skills

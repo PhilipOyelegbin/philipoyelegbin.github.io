@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaExclamation, FaStar } from 'react-icons/fa'
 import axios from "axios";
 import { toast } from "react-toastify";
+// import handshake from "../assets/feedback.jpg"
 
 const Feedback = () => {
   const [user, setUser] = useState({
@@ -34,11 +35,11 @@ const Feedback = () => {
   };
 
   return (
-    <section className="shadow-lg px-5 py-10 lg:px-20" id="testimonial">
+    <section className="px-5 py-10 lg:px-20" id="feedback">
       <div
-        className="bg-[url('https://img.freepik.com/free-photo/rear-view-businessman-talking-phone-city_53876-129657.jpg?size=626&ext=jpg&uid=R55806939&ga=GA1.1.405634466.1654584137&semt=sph')] bg-no-repeat bg-cover bg-center rounded-2xl">
+        className={`feedback-bg`}>
         {/* container holding the contact form */}
-        <div className="lg:w-2/5 w-full bg-yellow-500 bg-opacity-30 rounded-2xl text-white p-5">
+        <div className="lg:w-2/5 w-full bg-purple-950 bg-opacity-80 rounded-2xl text-white p-5">
           <h3 className="text-2xl font-extrabold mb-3">I will love to hear your feedback</h3>
           <form onSubmit={handleSend} autoComplete="false">
             <div className="form-control">
