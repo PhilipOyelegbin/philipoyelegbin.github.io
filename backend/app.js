@@ -20,7 +20,7 @@ mongoose.connect(process.env.DB_URL)
 // middleware
 app.use(express.json())
 app.use(helmet())
-app.use(cors({"origin": ["http://localhost:3000", "https://philipoyelegbin.com.ng", "https://philipoyelegbin.netlify.app"]}))
+app.use(cors({"origin": ["http://localhost:3000", "https://philipoyelegbin.com.ng", "https://philipoyelegbin.netlify.app", "*"]}))
 app.use(express.urlencoded({extended: false}))
 
 // page route
