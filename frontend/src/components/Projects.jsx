@@ -1,11 +1,17 @@
 import Slider from "react-slick";
-import { FaInternetExplorer, FaGithub, FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import {
+  FaInternetExplorer,
+  FaGithub,
+  FaChevronCircleLeft,
+  FaChevronCircleRight,
+} from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { getData } from "../hooks/useFetch";
+import { Skeleton } from "./Skeleton";
 
 const Projects = () => {
-  const {data, error, loading} = getData(process.env.REACT_APP_PROJECT_URL);
+  const { data, error, loading } = getData(process.env.REACT_APP_PROJECT_URL);
 
   const settings = {
     dots: false,
@@ -14,8 +20,8 @@ const Projects = () => {
     slidesToScroll: 1,
     speed: 500,
     cssEase: "linear",
-    nextArrow: <NextArrow/>,
-    prevArrow: <PrevArrow/>,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     initialSlide: 0,
     responsive: [
       {
@@ -23,60 +29,106 @@ const Projects = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true
-        }
+          infinite: true,
+        },
       },
       {
         breakpoint: 568,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true
-        }
-      }
-    ]
+          infinite: true,
+        },
+      },
+    ],
   };
 
   // function to control the slide to the next slide
-  function NextArrow({onClick}) {
+  function NextArrow({ onClick }) {
     return (
-      <FaChevronCircleRight className="text-3xl text-purple-700 absolute top-1/2 right-0 cursor-pointer -translate-y-1/2 z-10 hover:text-purple-950" onClick={onClick} />
+      <FaChevronCircleRight
+        className='text-3xl text-purple-700 absolute top-1/2 right-0 cursor-pointer -translate-y-1/2 z-10 hover:text-purple-950'
+        onClick={onClick}
+      />
     );
   }
 
   // function to control the slide to the previous slide
-  function PrevArrow({onClick}) {
+  function PrevArrow({ onClick }) {
     return (
-      <FaChevronCircleLeft className="text-3xl text-purple-700 absolute top-1/2 left-0 cursor-pointer -translate-y-1/2 z-10 hover:text-purple-950" onClick={onClick} />
+      <FaChevronCircleLeft
+        className='text-3xl text-purple-700 absolute top-1/2 left-0 cursor-pointer -translate-y-1/2 z-10 hover:text-purple-950'
+        onClick={onClick}
+      />
     );
   }
 
   return (
-    <section className="text-center px-5 py-10 lg:px-20" id="projects">
+    <section className='text-center px-5 py-10 lg:px-20' id='projects'>
       <h2>MY WORKS</h2>
-      <p className="lg:text-center">Here is a selection of my most recent work, <strong>view my other works on <a href="https://github.com/PhilipOyelegbin" className="text-purple-700">GitHub</a>.</strong></p>
+      <p className='lg:text-center'>
+        Here is a selection of my most recent work,{" "}
+        <strong>
+          view my other works on{" "}
+          <a
+            href='https://github.com/PhilipOyelegbin'
+            className='text-purple-700'
+          >
+            GitHub
+          </a>
+          .
+        </strong>
+      </p>
 
-      {loading ? <h3 className="text-2xl text-center">Loading...</h3> : error && <h3 className="text-2xl text-center">Unable to fetch data</h3>}
+      {loading ? (
+        <Skeleton />
+      ) : (
+        error && <h3 className='text-2xl text-center'>Unable to fetch data</h3>
+      )}
 
       <Slider {...settings}>
-        {data && data?.map(project => {
-          return (
-            <figure className="card bg-slate-700 bg-opacity-30 hover:shadow-md hover:shadow-slate-700 h-[490px]" key={project._id}>
-              <img src={project.cover_image || "Unavailable"} className="w-full rounded-t-lg h-56" alt="project background" />
-              <figcaption className="p-3">
-                <h3 className="text-xl">{project.title || "Unavailable"}</h3>
-                <p className="text-sm">{project.description || "Unavailable"}</p>
-                <div className="flex gap-5 items-center text-2xl mt-3">
-                  <a href={project.project_url} className="hover:text-purple-700" target="_blank" rel="noopener noreferrer"><FaInternetExplorer/></a>
-                  <a href={project.github_url} className="hover:text-purple-700" target="_blank" rel="noopener noreferrer"><FaGithub/></a>
-                </div>
-              </figcaption>
-            </figure>
-          )
-        })}
+        {data &&
+          data?.map((project) => {
+            return (
+              <figure
+                className='card bg-slate-700 bg-opacity-30 hover:shadow-md hover:shadow-slate-700 h-[490px]'
+                key={project._id}
+              >
+                <img
+                  src={project.cover_image || "Unavailable"}
+                  className='w-full rounded-t-lg h-56'
+                  alt='project background'
+                />
+                <figcaption className='p-3'>
+                  <h3 className='text-xl'>{project.title || "Unavailable"}</h3>
+                  <p className='text-sm'>
+                    {project.description || "Unavailable"}
+                  </p>
+                  <div className='flex gap-5 items-center text-2xl mt-3'>
+                    <a
+                      href={project.project_url}
+                      className='hover:text-purple-700'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaInternetExplorer />
+                    </a>
+                    <a
+                      href={project.github_url}
+                      className='hover:text-purple-700'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaGithub />
+                    </a>
+                  </div>
+                </figcaption>
+              </figure>
+            );
+          })}
       </Slider>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
