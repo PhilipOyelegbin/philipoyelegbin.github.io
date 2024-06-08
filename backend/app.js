@@ -18,10 +18,20 @@ mongoose.connect(process.env.DB_URL)
     .catch(err => console.log(err))
 
 // middleware
+const corsOptions = {
+    origin: "http://localhost:3000" || "https://philipoyelegbin.com.ng" || "https://philipoyelegbin.netlify.app",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    allowedHeaders: [
+        "Content-Type",
+        "Authorization", 
+        "Access-Control-Allow-Credentials"
+    ],
+};
 app.use(express.json())
 app.use(helmet())
-app.use(cors())
-// app.use(cors({"origin": ["http://localhost:3000", "https://philipoyelegbin.com.ng", "https://philipoyelegbin.netlify.app", "*"]}))
+// app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.urlencoded({extended: false}))
 
 // page route
