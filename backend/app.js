@@ -19,7 +19,7 @@ mongoose.connect(process.env.DB_URL)
 
 // middleware
 const corsOptions = {
-    origin: "http://localhost:3000" || "https://philipoyelegbin.com.ng" || "https://philipoyelegbin.netlify.app",
+    origin: ["http://localhost:3000", "https://philipoyelegbin.com.ng", "https://philipoyelegbin.netlify.app"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: [
