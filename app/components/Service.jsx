@@ -7,8 +7,8 @@ const Service = () => {
       <h2>ACTUALIZATION</h2>
       <p className='lg:text-center'>
         Web design for businesses! From conception to product UI/UX and
-        developing web pages, I've got you covered.{" "}
-        <strong>Here's how it works</strong>
+        developing web pages, I have got you covered.{" "}
+        <strong>Here is how it works</strong>
       </p>
 
       {/* grid view of the services in a container */}
