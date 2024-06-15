@@ -13,6 +13,7 @@ export const metadata = {
   title: "Philip Oyelegbin - Web and Cloud Engineer",
   description:
     "Result-Driven Support Specialist | Frontend Developer | Cloud Engineer | Passionate Innovator | STEM Advocate",
+  favicon: "/favicon.ico",
   openGraph: {
     title: "Philip Oyelegbin - Web and Cloud Engineer",
     description:
@@ -26,7 +27,30 @@ export const metadata = {
   twitter: {
     handle: "@OyelegbinPhilip",
     site: "@OyelegbinPhilip",
+    images: "/opengraph-image.png",
     cardType: "summary_large_image",
+  },
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/apple-touch-icon.png",
+    shortcut: "/shortcut-icon.png",
+    apple: "/apple-touch-icon.png",
+    other: {
+      rel: "apple-touch-icon-precomposed",
+      url: "/apple-touch-icon-precomposed.png",
+    },
   },
 };
 
