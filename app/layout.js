@@ -14,6 +14,7 @@ export const metadata = {
   description:
     "Result-Driven Support Specialist | Frontend Developer | Cloud Engineer | Passionate Innovator | STEM Advocate",
   favicon: "/favicon.ico",
+  type: "website",
   openGraph: {
     title: "Philip Oyelegbin - Web and Cloud Engineer",
     description:

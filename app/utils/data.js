@@ -54,6 +54,7 @@ export const SkillsData = {
     { cover_image: "/github.png", label: "GitHub" },
     { cover_image: "/vim.png", label: "Vim" },
     { cover_image: "/netlify.png", label: "Netlify" },
+    { cover_image: "/vercel.svg", label: "Vercel" },
   ],
 };
 
