@@ -9,18 +9,18 @@ const montAlt = Montserrat_Alternates({
 });
 
 export const metadata = {
-  title:
-    "Philip Oyelegbin - Support Specialist | Frontend Developer | Cloud Engineer | Passionate Innovator | STEM Advocate",
+  metadataBase: new URL(process.env.HOST_URI),
+  title: "Philip Oyelegbin - Web and Cloud Engineer",
   description:
     "Result-Driven Support Specialist | Frontend Developer | Cloud Engineer | Passionate Innovator | STEM Advocate",
   openGraph: {
-    title:
-      "Philip Oyelegbin - Support Specialist | Frontend Developer | Cloud Engineer | Passionate Innovator | STEM Advocate",
+    title: "Philip Oyelegbin - Web and Cloud Engineer",
     description:
       "Result-Driven Support Specialist | Frontend Developer | Cloud Engineer | Passionate Innovator | STEM Advocate",
-    url: "https://philipoyelegbin.com.ng",
+    url: process.env.HOST_URI,
     type: "website",
     locale: "en_US",
+    images: "/opengraph-image.png",
     site_name: "Philip Oyelegbin",
   },
   twitter: {
