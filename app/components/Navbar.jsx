@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { FaTimes } from "react-icons/fa";
+import Link from "next/link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -10,17 +11,16 @@ const Navbar = () => {
     setOpen(!open);
   };
 
-  // open
-  //   ? document.getElementById("root").classList.add("fixed")
-  //   : document.getElementById("root").classList.remove("fixed");
-
   return (
     <header>
       {/* logo */}
       <div className='flex justify-between items-center'>
-        <h1 className='logo text-xl md:text-2xl font-bold text-slate-200'>
+        <Link
+          href='/auth'
+          className='logo text-xl md:text-2xl font-bold text-slate-200'
+        >
           {"(Philip Oyelegbin) =>"}
-        </h1>
+        </Link>
       </div>
 
       {/* menu button */}
@@ -36,36 +36,40 @@ const Navbar = () => {
       <nav className={open ? "right-0" : "-right-full"}>
         <ul>
           <li>
-            <a href='#about' className='menuLink' onClick={handleMenuContent}>
+            <Link
+              href='#about'
+              className='menuLink'
+              onClick={handleMenuContent}
+            >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href='#qualifications'
               className='menuLink'
               onClick={handleMenuContent}
             >
               Qualifications
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href='#projects'
               className='menuLink'
               onClick={handleMenuContent}
             >
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href='#feedback'
               className='menuLink'
               onClick={handleMenuContent}
             >
               Feedback
-            </a>
+            </Link>
           </li>
 
           {/* Icon when menu is open. Heroicon name: outline/x Menu open: "block", Menu closed: "hidden" */}

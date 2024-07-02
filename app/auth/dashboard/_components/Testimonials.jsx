@@ -1,11 +1,13 @@
+"use client";
 import { useEffect, useState } from "react";
-import { Skeleton } from "./Skeleton";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import { Skeleton } from "@/app/components/Skeleton";
+import Link from "next/link";
 
-const Testimonial = () => {
+export const Testimonials = () => {
   const [loading, setLoading] = useState(true);
   const [testimonials, setTestimonials] = useState();
   const [errorMsg, setErrorMsg] = useState();
@@ -86,22 +88,21 @@ const Testimonial = () => {
           testimonials && (
             <Slider {...settings}>
               {testimonials &&
-                testimonials
-                  ?.filter((item) => item.approved === true)
-                  ?.map((testimony) => (
-                    <div
-                      className='flex flex-col items-center bg-slate-700 bg-opacity-30 rounded-md p-5 h-72 md:h-60 overflow-y-scroll'
-                      key={testimony.email}
-                    >
-                      <h3 className='text-2xl text-center mb-2'>
-                        {testimony.full_name}
-                      </h3>
-                      <p>{testimony.comment}</p>
-                      <p className='mt-2 text-purple-700 text-center'>
-                        Rated: {testimony.rating}.0
-                      </p>
-                    </div>
-                  ))}
+                testimonials?.map((testimony) => (
+                  <Link
+                    href={`/auth/dashboard/update/feedback/${testimony._id}`}
+                    className='flex flex-col items-center bg-slate-700 bg-opacity-30 rounded-md p-5 h-72 md:h-60 overflow-y-scroll'
+                    key={testimony.email}
+                  >
+                    <h3 className='text-2xl text-center mb-2'>
+                      {testimony.full_name}
+                    </h3>
+                    <p>{testimony.comment}</p>
+                    <p className='mt-2 text-purple-700 text-center'>
+                      Rated: {testimony.rating}.0
+                    </p>
+                  </Link>
+                ))}
             </Slider>
           )
         )}
@@ -109,5 +110,3 @@ const Testimonial = () => {
     </section>
   );
 };
-
-export default Testimonial;

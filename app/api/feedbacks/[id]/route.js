@@ -15,10 +15,11 @@ export async function PATCH(req) {
   }
 }
 
-export async function GET() {
+export async function GET(req) {
   try {
+    console.log(req);
     const id = await req.params;
-    const feedbackData = await Feedback.findById({ id });
+    const feedbackData = await Feedback.findById({ _id: id });
     return NextResponse.json(
       { message: "Feedback received succesfully", feedbackData },
       { status: 200 }
@@ -28,7 +29,7 @@ export async function GET() {
   }
 }
 
-export async function DELETE() {
+export async function DELETE(req) {
   try {
     const id = await req.params;
     await Feedback.findByIdAndDelete({ id });

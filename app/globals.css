@@ -32,12 +32,12 @@
   h3 {@apply text-xl lg:text-[22px] leading-8;}
 
   h4 {@apply text-base lg:text-lg;}
+
+  p {@apply text-sm;}
 }
 
 @layer components {
   #root {@apply lg:relative;}
-
-  /* .logo {font-family: 'Pacifico', cursive;} */
 
   .menuLink {@apply text-lg ml-2 ease-linear duration-300 hover:text-slate-400 md:ml-0;}
 

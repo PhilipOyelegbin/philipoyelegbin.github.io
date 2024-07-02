@@ -44,6 +44,7 @@ const About = () => {
           width={300}
           height={300}
           alt='profile_picture'
+          priority
         />
 
         <div className='mt-3 flex gap-5 mx-auto w-fit px-4 py-2 rounded-full'>
