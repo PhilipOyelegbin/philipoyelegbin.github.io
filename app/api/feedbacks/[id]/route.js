@@ -1,9 +1,9 @@
 import Feedback from "@/app/(models)/Feedback";
 import { NextResponse } from "next/server";
 
-export async function PATCH(req) {
+export async function PATCH(req, { params }) {
   try {
-    const id = await req.params;
+    const { id } = params;
     const body = await req.json();
     const feedbackData = await Feedback.findByIdAndUpdate(id, body);
     return NextResponse.json(
@@ -11,33 +11,41 @@ export async function PATCH(req) {
       { status: 201 }
     );
   } catch (error) {
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
+    return NextResponse.json(
+      { message: "Error", error: error?.message },
+      { status: 500 }
+    );
   }
 }
 
-export async function GET(req) {
+export async function GET(req, { params }) {
   try {
-    console.log(req);
-    const id = await req.params;
-    const feedbackData = await Feedback.findById({ _id: id });
+    const { id } = params;
+    const feedbackData = await Feedback.findById(id);
     return NextResponse.json(
       { message: "Feedback received succesfully", feedbackData },
       { status: 200 }
     );
   } catch (error) {
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
+    return NextResponse.json(
+      { message: "Error", error: error?.message },
+      { status: 500 }
+    );
   }
 }
 
-export async function DELETE(req) {
+export async function DELETE(req, { params }) {
   try {
-    const id = await req.params;
-    await Feedback.findByIdAndDelete({ id });
+    const { id } = params;
+    await Feedback.findByIdAndDelete(id);
     return NextResponse.json(
       { message: "Feedback deleted succesfully" },
       { status: 200 }
     );
   } catch (error) {
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
+    return NextResponse.json(
+      { message: "Error", error: error?.message },
+      { status: 500 }
+    );
   }
 }

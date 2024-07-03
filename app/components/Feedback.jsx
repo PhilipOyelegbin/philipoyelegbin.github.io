@@ -9,6 +9,7 @@ const Feedback = () => {
     email: "",
     comment: "",
     rating: 5,
+    approved: false,
   });
 
   const errorMessage = {
@@ -53,6 +54,12 @@ const Feedback = () => {
             I will love to hear your feedback
           </h3>
           <form onSubmit={handleSend} autoComplete='false'>
+            <input
+              type='hidden'
+              name='approved'
+              value={user.approved}
+              onChange={handleChange}
+            />
             <div className='form-control'>
               <label htmlFor='rating' className='flex items-center gap-1'>
                 Rate my service: {user.rating}

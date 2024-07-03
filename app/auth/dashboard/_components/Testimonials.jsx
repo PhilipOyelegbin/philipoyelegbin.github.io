@@ -3,9 +3,16 @@ import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import {
+  FaChevronCircleLeft,
+  FaChevronCircleRight,
+  FaPenAlt,
+  FaTrash,
+} from "react-icons/fa";
 import { Skeleton } from "@/app/components/Skeleton";
 import Link from "next/link";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Testimonials = () => {
   const [loading, setLoading] = useState(true);
@@ -62,6 +69,20 @@ export const Testimonials = () => {
     );
   }
 
+  const handleDelete = async (id) => {
+    console.log(id);
+    await fetch(`/api/feedbacks/${id}`, {
+      method: "DELETE",
+      body: JSON.stringify(testimonials),
+    })
+      .then(() => {
+        toast.success("Deleted successfully");
+      })
+      .catch((error) => {
+        error.message && toast.error("An error occured!");
+      });
+  };
+
   useEffect(() => {
     fetch("/api/feedbacks")
       .then((resp) => resp.json())
@@ -89,8 +110,7 @@ export const Testimonials = () => {
             <Slider {...settings}>
               {testimonials &&
                 testimonials?.map((testimony) => (
-                  <Link
-                    href={`/auth/dashboard/update/feedback/${testimony._id}`}
+                  <div
                     className='flex flex-col items-center bg-slate-700 bg-opacity-30 rounded-md p-5 h-72 md:h-60 overflow-y-scroll'
                     key={testimony.email}
                   >
@@ -101,12 +121,30 @@ export const Testimonials = () => {
                     <p className='mt-2 text-purple-700 text-center'>
                       Rated: {testimony.rating}.0
                     </p>
-                  </Link>
+                    <div className='flex justify-between items-center text-2xl'>
+                      <Link
+                        href={`/auth/dashboard/update/feedback/${testimony._id}`}
+                      >
+                        <FaPenAlt className='text-blue-500' />
+                      </Link>
+                      <FaTrash
+                        className='text-rose-500 cursor-pointer'
+                        onClick={() => handleDelete(testimony._id)}
+                      />
+                    </div>
+                  </div>
                 ))}
             </Slider>
           )
         )}
       </div>
+      <ToastContainer
+        position='top-right'
+        autoClose={2000}
+        closeOnClick
+        pauseOnFocusLoss
+        pauseOnHover
+      />
     </section>
   );
 };

@@ -10,7 +10,10 @@ export async function POST(req) {
       { status: 201 }
     );
   } catch (error) {
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
+    return NextResponse.json(
+      { message: "Error", error: error?.message },
+      { status: 500 }
+    );
   }
 }
 
@@ -22,6 +25,9 @@ export async function GET() {
       { status: 200 }
     );
   } catch (error) {
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
+    return NextResponse.json(
+      { message: "Error", error: error?.message },
+      { status: 500 }
+    );
   }
 }

@@ -9,6 +9,7 @@ const feedbackSchema = new Schema(
     email: { type: String, require: [true, "The email is required"] },
     comment: { type: String, require: [true, "The comment is required"] },
     rating: { type: Number, require: [true, "The rating is required"] },
+    approved: { type: Boolean, require: [true, "The approval is required"] },
   },
   { timestamps: true }
 );
