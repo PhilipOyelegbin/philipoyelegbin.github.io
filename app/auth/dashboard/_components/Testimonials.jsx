@@ -94,7 +94,7 @@ export const Testimonials = () => {
   }, []);
 
   return (
-    <section className='px-5 py-10 lg:px-20'>
+    <section className='px-5 py-20 lg:px-20'>
       <h2 className='text-center'>TESTIMONIAL</h2>
       <div className='mx-auto mt-3'>
         {loading ? (

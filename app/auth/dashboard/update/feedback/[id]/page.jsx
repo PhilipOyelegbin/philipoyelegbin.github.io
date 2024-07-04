@@ -1,14 +1,17 @@
 "use client";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { FaExclamation, FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
+import Image from "next/image";
 
 const page = () => {
-  const dataPath = usePathname().split("/").splice(5);
+  const path = usePathname();
+  const dataPath = path.split("/").splice(5);
   const navigate = useRouter();
-  const [loading, setLoading] = useState();
+  const [loading, setLoading] = useState(true);
   const [testimonials, setTestimonials] = useState({
     full_name: "",
     email: "",
@@ -54,23 +57,8 @@ const page = () => {
   }, []);
 
   return (
-    <article className='h-screen flex justify-center items-center'>
+    <article className='pt-16 pb-10 lg:h-screen flex flex-col-reverse md:flex-row gap-10 justify-center items-center px-5 lg:px-20'>
       <form onSubmit={handleUpdate} autoComplete='false'>
-        <div className='form-control'>
-          <label htmlFor='rating' className='flex items-center gap-1'>
-            Rate my service: {testimonials.rating}
-            <FaStar className='text-base text-yellow-500' />
-          </label>
-          <input
-            type='range'
-            name='rating'
-            min={0}
-            max={5}
-            value={testimonials.rating}
-            onChange={handleChange}
-            readOnly
-          />
-        </div>
         <div className='form-control'>
           <label htmlFor='full_name'>Full name:</label>
           <input
@@ -153,11 +141,7 @@ const page = () => {
           )} */}
         </div>
 
-        <button
-          type='submit'
-          // disabled={disabledState}
-          className='bg-white text-slate-700 px-4 py-2 rounded-lg ease-linear duration-300 disabled:bg-gray-500 disabled:bg-opacity-50'
-        >
+        <button type='submit' className='btn'>
           SEND
         </button>
         <ToastContainer
@@ -168,6 +152,20 @@ const page = () => {
           pauseOnHover
         />
       </form>
+      <aside className='flex-1 text-center bg-slate-200 p-5'>
+        <Image
+          src='/hero-bg.jpg'
+          className='hidden md:block w-full h-80 object-fill mb-5'
+          width={300}
+          height={100}
+          alt='banner'
+        />
+        <h2>Administrator</h2>
+        <h4>Your are signed in as an admin now.</h4>
+        <Link href='/auth/dashboard' className='btn'>
+          Go to Dashboard
+        </Link>
+      </aside>
     </article>
   );
 };
