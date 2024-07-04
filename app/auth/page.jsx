@@ -5,7 +5,7 @@ import { FaBackward, FaExclamation } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const page = () => {
+const Auth = () => {
   const home = useRouter();
   const [user, setUser] = useState({
     email: "",
@@ -102,4 +102,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Auth;
