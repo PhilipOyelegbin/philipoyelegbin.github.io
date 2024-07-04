@@ -51,7 +51,7 @@ const Navbar = () => {
         className={
           open
             ? "right-0"
-            : "-right-full" && navigate.includes("dashboard") && "hidden"
+            : "-right-full" || (navigate.includes("dashboard") && "hidden")
         }
       >
         <ul>
