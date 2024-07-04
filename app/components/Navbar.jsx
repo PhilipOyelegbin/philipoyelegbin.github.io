@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { FaTimes } from "react-icons/fa";
+import { FaChevronCircleLeft, FaTimes } from "react-icons/fa";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = usePathname();
 
   const handleMenuContent = () => {
     setOpen(!open);
@@ -25,15 +27,33 @@ const Navbar = () => {
 
       {/* menu button */}
       <button
-        className='text-4xl cursor-pointer lg:hidden block'
+        className={`${
+          navigate.includes("dashboard") && "hidden"
+        } text-4xl cursor-pointer lg:hidden block`}
         onClick={handleMenuContent}
       >
         {/* Icon when menu is closed. Heroicon name: outline/menu Menu open: "hidden", Menu closed: "block" */}
         <HiOutlineMenuAlt3 className={`h-6 w-6 ${open ? "hidden" : "block"}`} />
       </button>
 
+      {/* logout icon */}
+      <Link
+        href='/'
+        className={`${
+          !navigate.includes("dashboard") && "hidden"
+        } flex gap-1 items-center text-red-700 text-2xl`}
+      >
+        <FaChevronCircleLeft />
+      </Link>
+
       {/* menu content */}
-      <nav className={open ? "right-0" : "-right-full"}>
+      <nav
+        className={
+          open
+            ? "right-0"
+            : "-right-full" && navigate.includes("dashboard") && "hidden"
+        }
+      >
         <ul>
           <li>
             <Link

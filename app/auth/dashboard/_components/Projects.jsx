@@ -14,7 +14,7 @@ import Link from "next/link";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const Testimonials = () => {
+const Projects = () => {
   const [loading, setLoading] = useState(true);
   const [testimonials, setTestimonials] = useState();
   const [errorMsg, setErrorMsg] = useState();
@@ -93,8 +93,8 @@ export const Testimonials = () => {
   }, []);
 
   return (
-    <section className='px-5 pt-20 lg:px-20'>
-      <h2 className='text-center'>TESTIMONIAL</h2>
+    <section className='p-5 lg:px-20'>
+      <h2 className='text-center'>Projects</h2>
       <div className='mx-auto mt-3'>
         {loading ? (
           Array(1)
@@ -147,3 +147,5 @@ export const Testimonials = () => {
     </section>
   );
 };
+
+export default Projects;
