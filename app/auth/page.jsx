@@ -87,7 +87,10 @@ const Auth = () => {
             >
               Sign In
             </button>
-            <FaBackward className='text-2xl' onClick={() => home.push("/")} />
+            <FaBackward
+              className='text-2xl cursor-pointer'
+              onClick={() => home.push("/")}
+            />
           </div>
           <ToastContainer
             position='top-right'

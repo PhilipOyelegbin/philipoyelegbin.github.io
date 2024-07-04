@@ -7,16 +7,18 @@ import {
   FaChevronCircleLeft,
   FaChevronCircleRight,
   FaPenAlt,
+  FaPlusCircle,
   FaTrash,
 } from "react-icons/fa";
 import { Skeleton } from "@/app/components/Skeleton";
 import Link from "next/link";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Image from "next/image";
 
 const Projects = () => {
   const [loading, setLoading] = useState(true);
-  const [testimonials, setTestimonials] = useState();
+  const [project, setProject] = useState();
   const [errorMsg, setErrorMsg] = useState();
 
   const settings = {
@@ -70,9 +72,9 @@ const Projects = () => {
   }
 
   const handleDelete = async (id) => {
-    await fetch(`/api/feedbacks/${id}`, {
+    await fetch(`/api/projects/${id}`, {
       method: "DELETE",
-      body: JSON.stringify(testimonials),
+      body: JSON.stringify(project),
     })
       .then(() => {
         toast.success("Deleted successfully");
@@ -83,18 +85,24 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    fetch("/api/feedbacks")
+    fetch("/api/projects")
       .then((resp) => resp.json())
-      .then((data) => setTestimonials(data.feedbackData))
-      .catch((err) =>
-        setErrorMsg("Unable to load testimonials, try again later")
-      )
+      .then((data) => setProject(data.projectData))
+      .catch((err) => setErrorMsg("Unable to load projects, try again later"))
       .finally(() => setLoading(false));
   }, []);
 
   return (
     <section className='p-5 lg:px-20'>
-      <h2 className='text-center'>Projects</h2>
+      <div className='flex flex-wrap justify-between'>
+        <h2 className='text-center'>Projects</h2>
+        <Link
+          href='/auth/dashboard/update/project'
+          className='text-2xl text-lime-500'
+        >
+          <FaPlusCircle />
+        </Link>
+      </div>
       <div className='mx-auto mt-3'>
         {loading ? (
           Array(1)
@@ -102,37 +110,47 @@ const Projects = () => {
             .map((d, index) => <Skeleton key={index} />)
         ) : errorMsg ? (
           <p className='text-2xl text-center'>{errorMsg}</p>
-        ) : testimonials?.length < 1 ? (
+        ) : project?.length < 1 ? (
           <p className='text-2xl text-center'>No testimonial yet...</p>
         ) : (
-          testimonials && (
+          project && (
             <Slider {...settings}>
-              {testimonials &&
-                testimonials?.map((testimony) => (
-                  <div
-                    className='flex flex-col items-center bg-slate-700 bg-opacity-30 rounded-md p-5 h-72 md:h-60 overflow-y-scroll'
-                    key={testimony.email}
-                  >
-                    <h3 className='text-2xl text-center mb-2'>
-                      {testimony.full_name}
-                    </h3>
-                    <p>{testimony.comment}</p>
-                    <p className='mt-2 text-purple-700 text-center'>
-                      Rated: {testimony.rating}.0
-                    </p>
-                    <div className='flex gap-5 items-center text-2xl mx-auto w-fit mt-3'>
-                      <Link
-                        href={`/auth/dashboard/update/feedback/${testimony._id}`}
-                      >
-                        <FaPenAlt className='text-blue-500' />
-                      </Link>
-                      <FaTrash
-                        className='text-rose-500 cursor-pointer'
-                        onClick={() => handleDelete(testimony._id)}
+              {project &&
+                project?.map((project) => {
+                  return (
+                    <figure
+                      className='card bg-slate-700 bg-opacity-30 hover:shadow-md hover:shadow-slate-700 h-[490px]'
+                      key={project._id}
+                    >
+                      <Image
+                        src={project.cover_image || "Unavailable"}
+                        className='w-full rounded-t-lg h-56'
+                        width={300}
+                        height={300}
+                        alt='project background'
                       />
-                    </div>
-                  </div>
-                ))}
+                      <figcaption className='p-3'>
+                        <h3 className='text-xl'>
+                          {project.title || "Unavailable"}
+                        </h3>
+                        <p className='text-sm'>
+                          {project.description || "Unavailable"}
+                        </p>
+                        <div className='flex gap-5 justify-center items-center text-2xl mt-3'>
+                          <Link
+                            href={`/auth/dashboard/update/project/${project._id}`}
+                          >
+                            <FaPenAlt className='text-blue-500' />
+                          </Link>
+                          <FaTrash
+                            className='text-rose-500 cursor-pointer'
+                            onClick={() => handleDelete(project._id)}
+                          />
+                        </div>
+                      </figcaption>
+                    </figure>
+                  );
+                })}
             </Slider>
           )
         )}

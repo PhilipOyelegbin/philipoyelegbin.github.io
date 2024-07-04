@@ -48,7 +48,7 @@ const FeedbackDetail = ({ params }) => {
       .then((data) => setTestimonials(data.feedbackData))
       .catch(
         (err) =>
-          err && toast.error("Unable to load testimonials, try again later")
+          err && toast.error("Unable to load testimonial, try again later")
       );
   }, [id]);
 
