@@ -121,7 +121,7 @@ export const Testimonials = () => {
                     <p className='mt-2 text-purple-700 text-center'>
                       Rated: {testimony.rating}.0
                     </p>
-                    <div className='flex justify-between items-center text-2xl'>
+                    <div className='flex gap-5 items-center text-2xl mx-auto w-fit mt-3'>
                       <Link
                         href={`/auth/dashboard/update/feedback/${testimony._id}`}
                       >

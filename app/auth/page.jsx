@@ -1,5 +1,5 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaBackward, FaExclamation } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
