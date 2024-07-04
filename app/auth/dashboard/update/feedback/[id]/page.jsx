@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { FaStar } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,8 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const page = () => {
-  const path = usePathname();
-  const dataPath = path.split("/").splice(5);
+  const { id } = useParams();
   const navigate = useRouter();
   const [loading, setLoading] = useState(true);
   const [testimonials, setTestimonials] = useState({
@@ -27,7 +26,7 @@ const page = () => {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    await fetch(`/api/feedbacks/${dataPath}`, {
+    await fetch(`/api/feedbacks/${id}`, {
       method: "PATCH",
       body: JSON.stringify(testimonials),
     })
@@ -47,7 +46,7 @@ const page = () => {
   };
 
   useEffect(() => {
-    fetch(`/api/feedbacks/${dataPath}`)
+    fetch(`/api/feedbacks/${id}`)
       .then((resp) => resp.json())
       .then((data) => setTestimonials(data.feedbackData))
       .catch((err) =>
