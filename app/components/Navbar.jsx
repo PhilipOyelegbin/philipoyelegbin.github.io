@@ -47,60 +47,56 @@ const Navbar = () => {
       </Link>
 
       {/* menu content */}
-      <nav
-        className={
-          open
-            ? "right-0"
-            : "-right-full" || (navigate.includes("dashboard") && "hidden")
-        }
-      >
-        <ul>
-          <li>
-            <Link
-              href='#about'
-              className='menuLink'
-              onClick={handleMenuContent}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='#qualifications'
-              className='menuLink'
-              onClick={handleMenuContent}
-            >
-              Qualifications
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='#projects'
-              className='menuLink'
-              onClick={handleMenuContent}
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='#feedback'
-              className='menuLink'
-              onClick={handleMenuContent}
-            >
-              Feedback
-            </Link>
-          </li>
+      {!navigate.includes("dashboard") && (
+        <nav className={open ? "right-0" : "-right-full"}>
+          <ul>
+            <li>
+              <Link
+                href='#about'
+                className='menuLink'
+                onClick={handleMenuContent}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href='#qualifications'
+                className='menuLink'
+                onClick={handleMenuContent}
+              >
+                Qualifications
+              </Link>
+            </li>
+            <li>
+              <Link
+                href='#projects'
+                className='menuLink'
+                onClick={handleMenuContent}
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                href='#feedback'
+                className='menuLink'
+                onClick={handleMenuContent}
+              >
+                Feedback
+              </Link>
+            </li>
 
-          {/* Icon when menu is open. Heroicon name: outline/x Menu open: "block", Menu closed: "hidden" */}
-          <FaTimes
-            className={`h-6 w-6 mx-auto cursor-pointer lg:hidden ${
-              open ? "block" : "hidden"
-            }`}
-            onClick={handleMenuContent}
-          />
-        </ul>
-      </nav>
+            {/* Icon when menu is open. Heroicon name: outline/x Menu open: "block", Menu closed: "hidden" */}
+            <FaTimes
+              className={`h-6 w-6 mx-auto cursor-pointer lg:hidden ${
+                open ? "block" : "hidden"
+              }`}
+              onClick={handleMenuContent}
+            />
+          </ul>
+        </nav>
+      )}
     </header>
   );
 };
