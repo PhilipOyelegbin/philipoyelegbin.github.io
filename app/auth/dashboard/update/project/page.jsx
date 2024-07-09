@@ -58,53 +58,57 @@ const Project = () => {
             required
           />
         </div>
-        <div className='form-control'>
-          <label htmlFor='title'>Project Title:</label>
-          <input
-            id='title'
-            type='text'
-            name='title'
-            value={projects?.title}
-            onChange={handleChange}
-            placeholder='Enter your project title'
-            required
-          />
+        <div className='flex flex-col lg:flex-row gap-1'>
+          <div className='form-control'>
+            <label htmlFor='title'>Project Title:</label>
+            <input
+              id='title'
+              type='text'
+              name='title'
+              value={projects?.title}
+              onChange={handleChange}
+              placeholder='Enter your project title'
+              required
+            />
+          </div>
+          <div className='form-control'>
+            <label htmlFor='tag'>Project Tag:</label>
+            <input
+              id='tag'
+              type='text'
+              name='tag'
+              value={projects?.tag}
+              onChange={handleChange}
+              placeholder='Enter your project tag'
+              required
+            />
+          </div>
         </div>
-        <div className='form-control'>
-          <label htmlFor='tag'>Project Tag:</label>
-          <input
-            id='tag'
-            type='text'
-            name='tag'
-            value={projects?.tag}
-            onChange={handleChange}
-            placeholder='Enter your project tag'
-            required
-          />
-        </div>
-        <div className='form-control'>
-          <label htmlFor='project_url'>Project URL:</label>
-          <input
-            id='project_url'
-            type='url'
-            name='project_url'
-            value={projects?.project_url}
-            onChange={handleChange}
-            placeholder='Enter your project URL'
-            required
-          />
-        </div>
-        <div className='form-control'>
-          <label htmlFor='github_url'>GitHub URL:</label>
-          <input
-            id='github_url'
-            type='url'
-            name='github_url'
-            value={projects?.github_url}
-            onChange={handleChange}
-            placeholder='Enter your project github URL'
-            required
-          />
+        <div className='flex flex-col lg:flex-row gap-1'>
+          <div className='form-control'>
+            <label htmlFor='project_url'>Project URL:</label>
+            <input
+              id='project_url'
+              type='url'
+              name='project_url'
+              value={projects?.project_url}
+              onChange={handleChange}
+              placeholder='Enter your project URL'
+              required
+            />
+          </div>
+          <div className='form-control'>
+            <label htmlFor='github_url'>GitHub URL:</label>
+            <input
+              id='github_url'
+              type='url'
+              name='github_url'
+              value={projects?.github_url}
+              onChange={handleChange}
+              placeholder='Enter your project github URL'
+              required
+            />
+          </div>
         </div>
         <div className='form-control'>
           <label htmlFor='description'>Project Description:</label>

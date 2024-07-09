@@ -1,10 +1,10 @@
 "use client";
 import Slider from "react-slick";
 import {
-  FaInternetExplorer,
   FaGithub,
   FaChevronCircleLeft,
   FaChevronCircleRight,
+  FaYoutube,
 } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -132,7 +132,7 @@ const CloudProjects = () => {
                           target='_blank'
                           rel='noopener noreferrer'
                         >
-                          <FaInternetExplorer />
+                          <FaYoutube />
                         </Link>
                         <Link
                           href={project.github_url}

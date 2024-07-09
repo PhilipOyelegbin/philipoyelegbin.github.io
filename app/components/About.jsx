@@ -28,7 +28,7 @@ const About = () => {
         </p>
 
         <Link
-          href='https://drive.google.com/file/d/1RpymYdDKc52VJ79nfipSkYdzaa_1ISn0/view?usp=sharing'
+          href={process.env.CV_URI || "/"}
           className='btn w-fit'
           target='_blank'
           rel='noopener noreferrer'

@@ -18,43 +18,84 @@ export const EducationData = [
 
 export const SkillsData = {
   FrontendSkills: [
-    { cover_image: "/html5.png", label: "HTML" },
-    { cover_image: "/css3.png", label: "CSS" },
-    { cover_image: "/sass.png", label: "Sass" },
-    { cover_image: "/bootstrap.png", label: "Bootsrap" },
-    { cover_image: "/tailwind.png", label: "Tailwind" },
-    { cover_image: "/javascript.png", label: "JavaScript" },
-    { cover_image: "/react.svg", label: "React" },
-    { cover_image: "/next.svg", label: "Next" },
-    { cover_image: "/redux.svg", label: "Redux" },
+    { cover_image: "https://skillicons.dev/icons?i=html", label: "HTML" },
+    { cover_image: "https://skillicons.dev/icons?i=css", label: "CSS" },
+    { cover_image: "https://skillicons.dev/icons?i=sass", label: "Sass" },
+    {
+      cover_image: "https://skillicons.dev/icons?i=bootstrap",
+      label: "Bootsrap",
+    },
+    {
+      cover_image: "https://skillicons.dev/icons?i=tailwind",
+      label: "Tailwind",
+    },
+    {
+      cover_image: "https://skillicons.dev/icons?i=javascript",
+      label: "JavaScript",
+    },
+    { cover_image: "https://skillicons.dev/icons?i=react", label: "React" },
+    { cover_image: "https://skillicons.dev/icons?i=next", label: "Next" },
+    { cover_image: "https://skillicons.dev/icons?i=redux", label: "Redux" },
   ],
   BackendSkills: [
-    { cover_image: "/nodejs.svg", label: "Nodejs" },
-    { cover_image: "/express.png", label: "Express" },
-    { cover_image: "/mongodb.svg", label: "MongoDB" },
-    { cover_image: "/mysql.svg", label: "MySQL" },
-    { cover_image: "/postgresql.png", label: "PostgreSQL" },
+    {
+      cover_image: "https://skillicons.dev/icons?i=nodejs",
+      label: "Nodejs",
+    },
+    {
+      cover_image: "https://skillicons.dev/icons?i=express",
+      label: "Express",
+    },
+    {
+      cover_image: "https://skillicons.dev/icons?i=mongodb",
+      label: "MongoDB",
+    },
+    { cover_image: "https://skillicons.dev/icons?i=mysql", label: "MySQL" },
+    {
+      cover_image: "https://skillicons.dev/icons?i=postgresql",
+      label: "PostgreSQL",
+    },
   ],
   CloudSkills: [
-    { cover_image: "/gcp.png", label: "GCP" },
-    { cover_image: "/nginx.png", label: "Nginx" },
+    { cover_image: "https://skillicons.dev/icons?i=gcp", label: "GCP" },
+    { cover_image: "https://skillicons.dev/icons?i=nginx", label: "Nginx" },
     {
-      cover_image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM-FLAWWfGq2LXzkQUQcEkpfFvRiaySiSn3A&usqp=CAU",
+      cover_image: "https://skillicons.dev/icons?i=ansible",
       label: "Ansible",
     },
-    { cover_image: "/terraform.png", label: "Terraform" },
-    { cover_image: "/docker.svg", label: "Docker" },
-    { cover_image: "/kubernetes.png", label: "Kubernetes" },
+    {
+      cover_image: "https://skillicons.dev/icons?i=terraform",
+      label: "Terraform",
+    },
+    {
+      cover_image: "https://skillicons.dev/icons?i=docker",
+      label: "Docker",
+    },
+    {
+      cover_image: "https://skillicons.dev/icons?i=kubernetes",
+      label: "Kubernetes",
+    },
   ],
   OtherSkills: [
-    { cover_image: "/figma.png", label: "Figma" },
-    { cover_image: "/vscode.png", label: "VS Code" },
-    { cover_image: "/git.png", label: "Git" },
-    { cover_image: "/github.png", label: "GitHub" },
-    { cover_image: "/vim.png", label: "Vim" },
-    { cover_image: "/netlify.png", label: "Netlify" },
-    { cover_image: "/vercel.svg", label: "Vercel" },
+    { cover_image: "https://skillicons.dev/icons?i=figma", label: "Figma" },
+    {
+      cover_image: "https://skillicons.dev/icons?i=vscode",
+      label: "VS Code",
+    },
+    { cover_image: "https://skillicons.dev/icons?i=git", label: "Git" },
+    {
+      cover_image: "https://skillicons.dev/icons?i=github",
+      label: "GitHub",
+    },
+    { cover_image: "https://skillicons.dev/icons?i=vim", label: "Vim" },
+    {
+      cover_image: "https://skillicons.dev/icons?i=netlify",
+      label: "Netlify",
+    },
+    {
+      cover_image: "https://skillicons.dev/icons?i=vercel",
+      label: "Vercel",
+    },
   ],
 };
 
