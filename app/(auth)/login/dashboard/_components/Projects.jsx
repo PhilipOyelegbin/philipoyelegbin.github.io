@@ -97,7 +97,7 @@ const Projects = () => {
       <div className='flex flex-wrap justify-between'>
         <h2 className='text-center'>Projects</h2>
         <Link
-          href='/auth/dashboard/update/project'
+          href='/login/dashboard/update/project'
           className='text-2xl text-lime-500'
         >
           <FaPlusCircle />
@@ -138,7 +138,7 @@ const Projects = () => {
                         </p>
                         <div className='flex gap-5 justify-center items-center text-2xl mt-3'>
                           <Link
-                            href={`/auth/dashboard/update/project/${project._id}`}
+                            href={`/login/dashboard/update/project/${project._id}`}
                           >
                             <FaPenAlt className='text-blue-500' />
                           </Link>

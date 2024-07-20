@@ -122,7 +122,7 @@ export const Testimonials = () => {
                     </p>
                     <div className='flex gap-5 items-center text-2xl mx-auto w-fit mt-3'>
                       <Link
-                        href={`/auth/dashboard/update/feedback/${testimony._id}`}
+                        href={`/login/dashboard/update/feedback/${testimony._id}`}
                       >
                         <FaPenAlt className='text-blue-500' />
                       </Link>

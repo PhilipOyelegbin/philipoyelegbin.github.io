@@ -52,6 +52,12 @@ export const metadata = {
   },
 };
 
-export default function AdminLayout({ children }) {
-  return <main className={montAlt.className}>{children}</main>;
+export default function AuthLayout({ children }) {
+  return (
+    <html lang='en'>
+      <body>
+        <main className={montAlt.className}>{children}</main>
+      </body>
+    </html>
+  );
 }

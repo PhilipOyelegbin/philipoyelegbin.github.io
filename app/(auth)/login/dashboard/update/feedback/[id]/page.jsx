@@ -135,7 +135,7 @@ const FeedbackDetail = ({ params }) => {
         />
         <h2>Administrator</h2>
         <h4>Your are signed in as an admin now.</h4>
-        <Link href='/auth/dashboard' className='btn'>
+        <Link href='/login/dashboard' className='btn'>
           Go to Dashboard
         </Link>
       </aside>

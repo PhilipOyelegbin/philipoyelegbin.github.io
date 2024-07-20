@@ -18,7 +18,7 @@ const Navbar = () => {
       {/* logo */}
       <div className='flex justify-between items-center'>
         <Link
-          href='/auth'
+          href='/login'
           className='logo text-xl md:text-2xl font-bold text-slate-200'
         >
           {"(Philip Oyelegbin) =>"}
