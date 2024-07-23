@@ -134,14 +134,16 @@ const CloudProjects = () => {
                         >
                           <FaYoutube />
                         </Link>
-                        <Link
-                          href={project.github_url}
-                          className='hover:text-purple-700'
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          <FaGithub />
-                        </Link>
+                        {project.github_url && (
+                          <Link
+                            href={project.github_url}
+                            className='hover:text-purple-700'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <FaGithub />
+                          </Link>
+                        )}
                       </div>
                     </figcaption>
                   </figure>

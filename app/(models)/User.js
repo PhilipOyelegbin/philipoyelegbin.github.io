@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 const userSchema = new Schema(
   {
     email: { type: String, require: [true, "The email is required"] },
-    password: { type: CryptoKey, require: [true, "The password is required"] },
+    password: { type: String, require: [true, "The password is required"] },
   },
   { timestamps: true }
 );

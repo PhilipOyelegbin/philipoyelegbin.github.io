@@ -1,35 +1,49 @@
-// import User from "@/app/(models)/User";
-// import { NextResponse } from "next/server";
+import User from "@/app/(models)/User";
+import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
 
-// export async function POST(req) {
-//   try {
-//     const body = await req.json();
-//     const projectData = await User.create(body);
-//     return NextResponse.json(
-//       { message: "User saved succesfully", userData },
-//       { status: 201 }
-//     );
-//   } catch (error) {
-//     return NextResponse.json(
-//       { message: "Error", error: error?.message },
-//       { status: 500 }
-//     );
-//   }
-// }
+export async function POST(req) {
+  try {
+    const { email, password } = await req.json();
 
-// export async function GET() {
-//   try {
-//     const projectData = await User.find();
-//     return NextResponse.json(
-//       { message: "User received succesfully", userData },
-//       { status: 200 }
-//     );
-//   } catch (error) {
-//     return NextResponse.json(
-//       { message: "Error", error: error?.message },
-//       { status: 500 }
-//     );
-//   }
-// }
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return NextResponse.json(
+        { message: "Email already in use" },
+        { status: 400 }
+      );
+    }
 
-console.log("in progress...");
+    const hashedPassword = await bcrypt.hash(password, 12);
+
+    const newUser = await User.create({
+      email,
+      password: hashedPassword,
+    });
+
+    return NextResponse.json(
+      { message: "User registered succesfully", newUser },
+      { status: 201 }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { message: "Error", error: error?.message },
+      { status: 500 }
+    );
+  }
+}
+
+export async function GET() {
+  try {
+    const userData = await User.find();
+    return NextResponse.json(
+      { message: "All user fetched succesfully", userData },
+      { status: 200 }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { message: "Error", error: error?.message },
+      { status: 500 }
+    );
+  }
+}

@@ -1,12 +1,14 @@
 "use client";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { signIn, useSession } from "next-auth/react";
 import { FaBackward, FaExclamation } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
-  const navigate = useRouter();
+  const route = useRouter();
+  const session = useSession();
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -26,18 +28,30 @@ const Login = () => {
 
   const handleSend = async (e) => {
     e.preventDefault();
-    await fetch("/api/users", {
-      method: "POST",
-      body: JSON.stringify(user),
-    })
-      .then(() => {
-        toast.success("Login passed!");
-        setUser({ email: "", password: "" });
-      })
-      .catch((error) => {
-        error.message && toast.error("Invalid details!");
+
+    try {
+      const res = await signIn("credentials", {
+        redirect: false,
+        email: user.email,
+        password: user.password,
       });
+
+      if (res?.error) {
+        toast.error("Invalid details!");
+      } else if (res?.url) {
+        route.replace("/login/dashboard");
+      }
+    } catch (error) {
+      console.error("Error during sign-in:", error);
+      toast.error("An unexpected error occurred. Please try again.");
+    }
   };
+
+  useEffect(() => {
+    if (session?.status === "authenticated") {
+      route.replace("/login/dashboard");
+    }
+  }, [session, route]);
 
   return (
     <section className='bg-purple-700 bg-opacity-30 flex justify-center items-center px-5 py-10 lg:px-20 h-svh'>
@@ -65,14 +79,14 @@ const Login = () => {
           )}
         </div>
         <div className='form-control'>
-          <label htmlFor='password'>Password:</label>
+          <label htmlFor='password'>Pass phrase:</label>
           <input
             id='password'
             type='password'
             name='password'
             value={user.password}
             onChange={handleChange}
-            placeholder='Enter your password'
+            placeholder='XXXXXXXXXX'
             required
           />
           {user.password === "" && (
@@ -90,10 +104,9 @@ const Login = () => {
           >
             Sign In
           </button>
-          <FaBackward
-            className='text-2xl cursor-pointer'
-            onClick={() => navigate.push("/")}
-          />
+          <a href='/' className='text-2xl block'>
+            <FaBackward />
+          </a>
         </div>
         <ToastContainer
           position='top-right'

@@ -2,6 +2,8 @@ import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { getServerSession } from "next-auth";
+import { AuthProvdier } from "@/app/utils/SessionProvider";
 
 const montAlt = Montserrat_Alternates({
   subsets: ["latin"],
@@ -55,13 +57,16 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const session = await getServerSession();
   return (
     <html lang='en'>
       <body className={montAlt.className}>
-        <Navbar />
-        <main className={montAlt.className}>{children}</main>
-        <Footer />
+        <AuthProvdier session={session}>
+          <Navbar />
+          <main className={montAlt.className}>{children}</main>
+          <Footer />
+        </AuthProvdier>
       </body>
     </html>
   );
