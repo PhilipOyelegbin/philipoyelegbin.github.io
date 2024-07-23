@@ -116,7 +116,6 @@ const ProjectDetail = ({ params }) => {
               value={projects?.github_url}
               onChange={handleChange}
               placeholder='Enter your project github URL'
-              required
             />
           </div>
         </div>
