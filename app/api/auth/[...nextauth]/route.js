@@ -15,7 +15,6 @@ export const authOptions = {
       },
       async authorize(credentials) {
         try {
-          console.log(credentials);
           const user = await User.findOne({ email: credentials.email });
           if (!user) {
             throw new Error("No user found with the provided email");
@@ -32,7 +31,6 @@ export const authOptions = {
 
           return user;
         } catch (err) {
-          console.error("Error during authorization:", err);
           throw new Error("Authorization failed");
         }
       },
